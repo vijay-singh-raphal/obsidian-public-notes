@@ -4,6 +4,7 @@ Python was created by Guido Van Rossum a Dutch programmer. It is named after the
 -  Python 2.0 in 2000 -> Introduced list comprehension, Garbage Collector.
 -  Python 3.0 in 2010 -> Major changes, better design.
 -  End of Python 2 in 2020.
+![python logo|500](https://static0.howtogeekimages.com/wordpress/wp-content/uploads/2025/08/python-logo-over-blurred-python-code-background-with-the-word-python-written-in-yellow-underneath.png?w=1200&h=628&fit=crop)
 # What is python?
 Python is high level, hybrid programming language that is known for its simplicity, readability, and flexibility.
 Python is widely used today in ->
