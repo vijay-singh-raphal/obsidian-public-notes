@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pythonStack/CorePython/What is knowledge.md",
+                "file": "pythonStack/CorePython/History of python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "What is knowledge"
+              "title": "History of python"
             }
           }
         ]
@@ -180,12 +180,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "6b44a6d8123e48d6",
   "lastOpenFiles": [
-    "pythonStack/CorePython/History of python.md",
-    "pythonStack/CorePython/What is knowledge.md"
+    "pythonStack/CorePython/What is knowledge.md",
+    "pythonStack/CorePython/History of python.md"
   ]
 }

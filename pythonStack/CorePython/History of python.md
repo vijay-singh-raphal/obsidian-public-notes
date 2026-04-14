@@ -20,3 +20,6 @@ It belongs to multiple categories because of its features.
 3. Object - Oriented -> Everything in python is an object, support - Classes, Objects, Inheritance, Polymorphism, Encapsulation.
 4. Procedural - language -> Support step by step instructions, uses functions and scope.
 5. General - purpose -> Not limited to one domain, used in - web dev, AI, ML, DS, DL etc.
+# Python is hybrid language.
+- Python code is first complied into bytecode (.pyc).
+- 
