@@ -2,25 +2,17 @@
 
 ## About Me
 
-* Assistant Professor in Computer Science
-* Teaching Data Structures & Algorithms, Python, and Web Development with Python
-* Passionate about mentoring future developers and engineers
+Assistant Professor in Computer Science with expertise in teaching and mentoring students in core computer science and software engineering disciplines.
 
-## Current Focus
+## Areas of Expertise
 
-* Backend Development with Python & Django
-* Advanced Computer Science Education
-* Building structured learning roadmaps for students
+* Data Structures & Algorithms
+* Python Programming
+* Web Development with Python
+* Backend Engineering
+* Software Development Best Practices
 
-## Future Learning Goals
-
-* Artificial Intelligence (AI)
-* Machine Learning (ML)
-* Data Science (DS)
-* Deep Learning (DL)
-* Robotics
-
-## Tech Stack
+## Technical Proficiency
 
 * Python
 * Django / Django REST Framework
@@ -29,6 +21,14 @@
 * Docker
 * Git / GitHub
 
-## Mission
+## Academic & Emerging Technology Interests
 
-To bridge academic teaching with industry-level software engineering and emerging technologies.
+* Artificial Intelligence (AI)
+* Machine Learning (ML)
+* Data Science (DS)
+* Deep Learning (DL)
+* Robotics
+
+## Professional Mission
+
+Committed to bridging academic education with industry-level software engineering practices and emerging technologies.
