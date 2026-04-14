@@ -12,4 +12,3 @@ Python is widely used today in ->
 -  AI
 -  Automation
 -  Scientific computing
-
