@@ -22,5 +22,5 @@ It belongs to multiple categories because of its features.
 5. General - purpose -> Not limited to one domain, used in - web dev, AI, ML, DS, DL etc.
 # Python is hybrid language.
 - Python code is first complied into bytecode (.pyc).
-	- This compilation is automtic and hidden from the user.
+	- This compilation is automatic and hidden from the user.
 - The bytecode is then interpreted by the python virtual machine.
