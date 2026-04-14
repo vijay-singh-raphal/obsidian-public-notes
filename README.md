@@ -1,4 +1,4 @@
-# Hi, I'm [Vijay Singh] 👋
+# Hi, I'm Vijay Singh 👋
 
 ## About Me
 
