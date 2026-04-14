@@ -12,3 +12,10 @@ Python is widely used today in ->
 -  AI
 -  Automation
 -  Scientific computing
+# What type of language is python?
+It belongs to multiple categories because of its features.
+1. High level -> close to human language, easy to read and write, no need to manage memory location.
+2. Dynamic type -> No need to declare data types, type is decided at runtime.
+3. Object - Oriented -> Everything in python is an object, support - Classes, Objects, Inheritance, Polymorphism, Encapsulation.
+4. Procedural - language -> Support step by step instructions, uses functions and scope.
+5. General - purpose -> Not limited to one domain, used in - web dev, AI, ML, DS, DL etc.
