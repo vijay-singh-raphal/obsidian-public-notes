@@ -1,4 +1,4 @@
-Python was created by Guido Van Rossum a Dutch programmer. It is named after the British comedy show "Monthy Python's Flying Circus".
+Python was created by Guido Van Rossum a Dutch programmer. It is named after the British comedy show "Monty Python's Flying Circus".
 				He started working on Python in December 1989.
 -  First version released in Feb 1991 -> 0.9.0.
 -  Python 2.0 in 2000 -> Introduced list comprehension, Garbage Collector.
