@@ -24,3 +24,4 @@ It belongs to multiple categories because of its features.
 - Python code is first complied into bytecode (.pyc).
 	- This compilation is automatic and hidden from the user.
 - The bytecode is then interpreted by the python virtual machine.
+#
