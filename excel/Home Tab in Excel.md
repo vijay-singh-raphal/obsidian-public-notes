@@ -54,3 +54,16 @@ Main options in Number Group:
 | Zero value      | Shows ₹0               | Shows dash (–)             |
 ## Autofill
 <span style="color: yellow; font-size:25px">How autofill work</span>
+![fill | 400](https://www.wallstreetmojo.com/wp-content/uploads/2018/12/AutoFill-in-Excel-Example-1-Fill-Flash-option.png)
+AutoFill in Excel is used to automatically fill data in cells without typing again and again.
+Examples:
+- 1, 2 → drag → 3, 4, 5…
+- Monday → drag → Tuesday, Wednesday…
+- Jan → Feb → Mar…
+- What AutoFill can do:
+Continue number series
+- Fill days, months
+- Copy formulas
+- Repeat same value
+## Basic Function
+<span style="color: yellow; font-size:25px">Working on basic function</span>
