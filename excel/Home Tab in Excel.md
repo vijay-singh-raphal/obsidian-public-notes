@@ -2,6 +2,8 @@
 [[Home Tab in Excel#Clipboard Group]]
 [[Home Tab in Excel#Alignment group]]
 [[Home Tab in Excel#Number Group]]
+[[Home Tab in Excel#Autofill]]
+[[Home Tab in Excel#Basic Function]]
 ## Font Group
 <span style="color: yellow; font-size:25px">Font Related work</span>
 ![font group | 500](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghNkgZ0PojN_yMXMLruh0GAyjSmZNIig9N8lE6JEA6f2hhK2xT1q3VW9TGrVhwnwlvyO_DdVzRap0d5F1saMjMaYo5R3YFIUfH2stcrCWzh3r3sRMqXTm9kl4z9pcGRWf5EWkGsnnqtapzKxpKua3ukgifkGF2KKYqFGeqrM1CAKZH1mtJlsCLgRY5ceOi/s1600/MS-Excel%20Font%20Group.jpg)
@@ -67,3 +69,12 @@ Continue number series
 - Repeat same value
 ## Basic Function
 <span style="color: yellow; font-size:25px">Working on basic function</span>
+![basic function | 500](https://static.wixstatic.com/media/2d24e3_b9e65b99ee974881a90765a74070f8fb~mv2.png/v1/fill/w_638,h_228,al_c,q_85,enc_avif,quality_auto/2d24e3_b9e65b99ee974881a90765a74070f8fb~mv2.png)
+Basic functions/ functions in Excel are pre-defined formulas used to perform calculations easily.
+Basic Functions
+- SUM() → Add numbers
+- AVERAGE() → Find average
+- MIN() → Smallest value
+- MAX() → Largest value
+- COUNT() → Count numeric cells
+- COUNTA() → Count non-empty cells
