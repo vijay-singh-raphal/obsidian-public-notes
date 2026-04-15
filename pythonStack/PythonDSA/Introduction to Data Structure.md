@@ -1,3 +1,4 @@
+![data structure | 1000](https://miro.medium.com/1*J38nYZU7gzu-4lQmtjlSUw.jpeg)
 ## <span style="color:#ED6AFF;">What is a data structure?</span>
 A **Data Structure** is a way of organizing and storing data so that it can be used efficiently.
 #### <span style="color:yellow;">Definition</span>
