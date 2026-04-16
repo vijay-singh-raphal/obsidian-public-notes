@@ -13,6 +13,9 @@ These are collections of data values stored in sequence.
 To write efficient code and crack coding interviews.
 <span style="color:orange;">Problem Solving Flow</span>
 Input → Algorithm → Output
+a,b                                           s
+         s = a + b 
+         data
 Data structures help in managing data properly while designing algorithms.
 ## <span style="color:#ED6AFF;">Why Different Data Structures Exist</span>
 A problem can often be solved in **multiple ways**.
