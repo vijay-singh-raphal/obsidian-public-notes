@@ -29,3 +29,11 @@ Because:
 - Different computers have different speeds
 - Different languages run differently
 - System load affects timing
+## How We Measure Time Complexity
+We measure by:
+**Number of simple operations performed
+Examples of operations:
+- Addition
+- Comparison
+- Assignment
+- Array access
