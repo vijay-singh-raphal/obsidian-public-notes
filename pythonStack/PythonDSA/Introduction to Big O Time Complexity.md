@@ -231,3 +231,13 @@ for i in range(n):
 |18|O(log log n)|
 |19|O(n³)|
 |20|O(n³)|
+```python
+for i in range(n):
+    for j in range(i*i):
+        print(j)
+```
+j will be = 0 + 1 + 4 + 9 + 16
+0² + 1² + 2² + 3² + 4²
+0² + 1² + 2² + ... + (n-1)² = (n−1)n(2n−1)/6
+​O(n3)
+
