@@ -48,5 +48,16 @@ $$ 2n -3 $$
 If N = 5 so number of operations are 7.
 If N= 1000 so number of operations are 
 $$ 2 * 1000 - 3 = 1997 $$
-If we use 
-$$ 1000 * (1000 - 1) / 2 => 3-OP-only $$
+If we use n*(n-1)/2 there are 3 OP only
+$$ 1000 * (1000 - 1) / 2 $$
+As input size increases, how does the number of operations grow?
+This is the core idea of **Time Complexity**.
+#### Time Complexity
+Time complexity measures how the runtime of an algorithm grows as input size (N) increases.
+To identify time complexity we do asymptotic analysis.
+And asymptotic expression is expressed using Big O notation.
+#### Asymptotic Analysis
+For I/P size N -> number of operation has to done by the computer is f(N).
+$$ f(x) = x^2 + 1 $$
+We can test the growth by give the value of x.
+When we do complexity analysis we are not interested in the precision we are interested in the trend.
