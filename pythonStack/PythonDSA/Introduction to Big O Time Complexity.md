@@ -61,3 +61,18 @@ For I/P size N -> number of operation has to done by the computer is f(N).
 $$ f(x) = x^2 + 1 $$
 We can test the growth by give the value of x.
 When we do complexity analysis we are not interested in the precision we are interested in the trend.
+![complexity|600](https://cdn.botpenguin.com/assets/website/0_ou_Bk_T_Mg_A_yg_Etfz_cd048b679d.webp)
+For identifying the trend we use asymptotic analysis.
+$$ f(n) = n + 3$$
+if n = 1 => no. of operation are 4
+if n = 1000 => no. of operation are 1003
+But suppose if N is very large and equation is (N + 3).
+"This 3 becomes insignificant so we can ignore it because we are not checking the precision we want a trend so it become".
+$$ f(n) = n $$
+So we can say that the time complexity of the order on N or O(N).
+O(N) => This tells as I/P size increases, time take increases linearly.
+
+So asymptotic analysis says that we are interested in the properties of a function f(N) as N become very large.
+#### Example solve
+$$f(n) = n^2 + 3n$$
+$$f(n) = 2n^2 + 5n$$
