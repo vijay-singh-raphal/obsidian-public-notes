@@ -1,4 +1,4 @@
-## <span style="color:#ED6AFF;">What Is Complexity Analysis?</span>
+## What Is Complexity Analysis?
 Complexity analysis measures **how efficient an algorithm is**.
 It helps answer:
 - How much **time** an algorithm takes
@@ -16,13 +16,13 @@ Approach 2
 Sum Formula
 1 + 2 + 3 + ⋯ + (N−1) = (N−1)N​/2
 ```
-## <span style="color:#ED6AFF;">Which Approach Is Better?</span>
-## <span style="color:#ED6AFF;">Why care about identifying which is better?</span>
+## Which Approach Is Better?
+## Why care about identifying which is better?
 Huge amount of data gives significant performance difference between solution.
-## <span style="color:#ED6AFF;">What does better means?</span>
+## What does better means?
 - Fast => Time Complexity
 - Less memory => Space Complexity
-## <span style="color:#ED6AFF;">Complexity Analysis, Big O</span>
+## Complexity Analysis, Big O
 #### Important Concept: Time Is NOT Measured in Seconds
 We do **not** measure algorithm efficiency by stopwatch time.
 Because:

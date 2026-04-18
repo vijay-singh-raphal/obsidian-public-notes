@@ -1,0 +1,96 @@
+/* ===== GLOBAL TEXT SETTINGS ===== */
+.markdown-preview-view {
+    font-family: "Inter", "Fira Code", sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #d4d4d4;
+    background-color: #0f1117;
+    padding: 20px;
+}
+
+/* ===== HEADINGS (SOOTHING COLORS) ===== */
+h1 {
+    color: #7aa2f7; /* soft blue */
+    font-weight: 700;
+    border-bottom: 2px solid #2a2f3a;
+    padding-bottom: 5px;
+}
+
+h2 {
+    color: #9ece6a; /* soft green */
+}
+
+h3 {
+    color: #e0af68; /* warm yellow */
+}
+
+h4 {
+    color: #bb9af7; /* lavender */
+}
+
+h5 {
+    color: #7dcfff; /* light cyan */
+}
+
+h6 {
+    color: #c0caf5; /* pale blue */
+}
+
+/* ===== SPAN CUSTOM STYLE ===== */
+span {
+    font-size: 20px;
+    color: #ff9e64; /* soft orange highlight */
+    font-weight: 500;
+}
+
+/* ===== PARAGRAPH SPACING ===== */
+p {
+    margin-bottom: 12px;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #7dcfff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bb9af7;
+}
+
+/* ===== CODE BLOCK ===== */
+code {
+    background-color: #1a1b26;
+    color: #7dcfff;
+    padding: 4px 6px;
+    border-radius: 6px;
+}
+
+/* ===== BLOCKQUOTE ===== */
+blockquote {
+    border-left: 4px solid #7aa2f7;
+    background-color: #1a1b26;
+    padding: 10px;
+    color: #c0caf5;
+}
+
+/* ===== LISTS ===== */
+ul li {
+    margin-bottom: 6px;
+}
+
+/* ===== TABLE ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #1a1b26;
+    color: #7aa2f7;
+}
+
+td, th {
+    border: 1px solid #2a2f3a;
+    padding: 8px;
+}
