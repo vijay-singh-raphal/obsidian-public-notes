@@ -73,6 +73,161 @@ So we can say that the time complexity of the order on N or O(N).
 O(N) => This tells as I/P size increases, time take increases linearly.
 
 So asymptotic analysis says that we are interested in the properties of a function f(N) as N become very large.
-#### Example solve
+#### Example to solve
 $$f(n) = n^2 + 3n$$
 $$f(n) = 2n^2 + 5n$$
+
+$$f(n)=2n^2 + 5n$$
+$$f(n)=3n + 10$$
+$$f(n)=7n^3 + 2n^2 + n$$
+$$f(n)=5\log n + 20$$
+$$f(n)=n^2 + 100n + 500$$
+$$f(n)=4$$
+$$f(n)=n\log n + n$$
+$$f(n)=10n^2 + 3n^3$$
+$$f(n)=2^n + n^2$$
+$$f(n)=n! + n^3$$
+$$f(n)=\sqrt{n} + n$$
+$$f(n)=n^2\log n + n^2$$
+$$f(n)=3\log n + \sqrt{n}$$
+$$f(n)=n^4 + n^3 + n$$
+$$f(n)=\log n + \log(n^2)$$
+$$f(n)=n + n\log n$$
+$$f(n)=2^n + 3^n$$
+$$f(n)=n^{1.5} + n$$
+$$f(n)=1000n + 5000$$
+$$f(n)=n^2 + n\log n$$
+```python
+# 1
+for i in range(n):
+    print(i)
+
+# 2
+for i in range(n):
+    for j in range(n):
+        print(i, j)
+
+# 3
+i = 1
+while i < n:
+    i = i * 2
+
+# 4
+i = n
+while i > 0:
+    i = i // 2
+
+# 5
+for i in range(n):
+    for j in range(i):
+        print(i, j)
+
+# 6
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            print(i, j, k)
+
+# 7
+for i in range(n):
+    print(i)
+for j in range(n):
+    print(j)
+
+# 8
+for i in range(n):
+    for j in range(1, n, 2):
+        print(i, j)
+
+# 9
+for i in range(n):
+    j = 1
+    while j < n:
+        j *= 2
+
+# 10
+for i in range(n):
+    j = n
+    while j > 0:
+        j //= 2
+
+# 11
+for i in range(n):
+    for j in range(i, n):
+        print(i, j)
+
+# 12
+for i in range(n):
+    for j in range(n):
+        break
+
+# 13
+for i in range(n):
+    if i % 2 == 0:
+        print(i)
+
+# 14
+i = 1
+while i < n:
+    j = 1
+    while j < n:
+        j *= 2
+    i *= 2
+
+# 15
+for i in range(n):
+    for j in range(n):
+        if j == n-1:
+            print(i)
+
+# 16
+for i in range(n):
+    j = i
+    while j > 0:
+        j -= 1
+
+# 17
+for i in range(n):
+    for j in range(n):
+        if j % 2 == 0:
+            print(j)
+
+# 18
+i = n
+while i > 1:
+    i = i ** 0.5
+
+# 19
+for i in range(n):
+    for j in range(i*i):
+        print(j)
+
+# 20
+for i in range(n):
+    for j in range(n):
+        for k in range(j):
+            print(i, j, k)
+```
+
+|#|Time Complexity|
+|---|---|
+|1|O(n)|
+|2|O(n²)|
+|3|O(log n)|
+|4|O(log n)|
+|5|O(n²)|
+|6|O(n³)|
+|7|O(n)|
+|8|O(n²)|
+|9|O(n log n)|
+|10|O(n log n)|
+|11|O(n²)|
+|12|O(n)|
+|13|O(n)|
+|14|O((log n)²)|
+|15|O(n²)|
+|16|O(n²)|
+|17|O(n²)|
+|18|O(log log n)|
+|19|O(n³)|
+|20|O(n³)|
