@@ -76,7 +76,6 @@ So asymptotic analysis says that we are interested in the properties of a functi
 #### Example to solve
 $$f(n) = n^2 + 3n$$
 $$f(n) = 2n^2 + 5n$$
-
 $$f(n)=2n^2 + 5n$$
 $$f(n)=3n + 10$$
 $$f(n)=7n^3 + 2n^2 + n$$
@@ -97,6 +96,11 @@ $$f(n)=2^n + 3^n$$
 $$f(n)=n^{1.5} + n$$
 $$f(n)=1000n + 5000$$
 $$f(n)=n^2 + n\log n$$
+
+| Case                    | Complexity |
+| ----------------------- | ---------- |
+| loop inside loop        | multiply   |
+| loops one after another | add        |
 ```python
 # 1
 for i in range(n):
@@ -209,37 +213,39 @@ for i in range(n):
             print(i, j, k)
 ```
 
-|#|Time Complexity|
-|---|---|
-|1|O(n)|
-|2|O(n²)|
-|3|O(log n)|
-|4|O(log n)|
-|5|O(n²)|
-|6|O(n³)|
-|7|O(n)|
-|8|O(n²)|
-|9|O(n log n)|
-|10|O(n log n)|
-|11|O(n²)|
-|12|O(n)|
-|13|O(n)|
-|14|O((log n)²)|
-|15|O(n²)|
-|16|O(n²)|
-|17|O(n²)|
-|18|O(log log n)|
-|19|O(n³)|
-|20|O(n³)|
+| #   | Time Complexity |
+| --- | --------------- |
+| 1   | O(n)            |
+| 2   | O(n²)           |
+| 3   | O(log n)        |
+| 4   | O(log n)        |
+| 5   | O(n²)           |
+| 6   | O(n³)           |
+| 7   | O(n)            |
+| 8   | O(n²)           |
+| 9   | O(n log n)      |
+| 10  | O(n log n)      |
+| 11  | O(n²)           |
+| 12  | O(n)            |
+| 13  | O(n)            |
+| 14  | O((log n)²)     |
+| 15  | O(n²)           |
+| 16  | O(n²)           |
+| 17  | O(n²)           |
+| 18  | O(log log n)    |
+| 19  | O(n³)           |
+| 20  | O(n³)           |
 ```python
 for i in range(n):
     for j in range(i*i):
         print(j)
 ```
-j will be = 0 + 1 + 4 + 9 + 16
-0² + 1² + 2² + 3² + 4²
-0² + 1² + 2² + ... + (n-1)² = (n−1)n(2n−1)/6
+
+j will be = $0 + 1 + 4 + 9 + 16$
+$0² + 1² + 2² + 3² + 4²$
+$0² + 1² + 2² + ... + (n-1)² = (n−1)n(2n−1)/6$
 ​$O(n^3)$
+
 ```python
 i = n
 while i > 1:
@@ -248,13 +254,13 @@ while i > 1:
 #### We want:  **How many times does the loop run? (value of k)**
 Each iteration: i → √i (So the value keeps decreasing.)
 
-|Iteration (k)|Value of i|Exponent|
-|---|---|---|
-|0|n|1|
-|1|√n|1/2|
-|2|√(√n)|1/4|
-|3|√(n^(1/4))|1/8|
-|4|n^(1/16)|1/16|
+| Iteration (k) | Value of i | Exponent |
+| ------------- | ---------- | -------- |
+| 0             | n          | 1        |
+| 1             | √n         | 1/2      |
+| 2             | √(√n)      | 1/4      |
+| 3             | √(n^(1/4)) | 1/8      |
+| 4             | n^(1/16)   | 1/16     |
 After **k iterations**: $i = n^{(1/2)k}$
 Because exponent is multiplied repeatedly, not added.
 #### When does loop stop?
