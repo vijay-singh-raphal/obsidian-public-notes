@@ -74,6 +74,14 @@ O(N) => This tells as I/P size increases, time take increases linearly.
 
 So asymptotic analysis says that we are interested in the properties of a function f(N) as N become very large.
 #### Example to solve
+Techniques to simplify Big O Expression.
+- Drop constant $O(25 N^2) => O(N^2)$
+- Drop insignificant terms $O(N^3 + 100N) => O(N^3)$
+- Different input parameters no drop $O(N^3 + M)$
+##### Logarithm
+$logn$ => It means $\log_2 n$ in coding.
+$\log_2 16$ => $2^4 = 16$
+$\log_2 8 = 2^3 = 8$
 $$f(n) = n^2 + 3n$$
 $$f(n) = 2n^2 + 5n$$
 $$f(n)=2n^2 + 5n$$
