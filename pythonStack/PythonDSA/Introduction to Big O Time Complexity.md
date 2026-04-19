@@ -240,3 +240,57 @@ j will be = 0 + 1 + 4 + 9 + 16
 0² + 1² + 2² + 3² + 4²
 0² + 1² + 2² + ... + (n-1)² = (n−1)n(2n−1)/6
 ​$O(n^3)$
+```python
+i = n
+while i > 1:
+    i = i ** 0.5
+```
+#### We want:  **How many times does the loop run? (value of k)**
+Each iteration: i → √i (So the value keeps decreasing.)
+
+|Iteration (k)|Value of i|Exponent|
+|---|---|---|
+|0|n|1|
+|1|√n|1/2|
+|2|√(√n)|1/4|
+|3|√(n^(1/4))|1/8|
+|4|n^(1/16)|1/16|
+After **k iterations**: $i = n^{(1/2)k}$
+Because exponent is multiplied repeatedly, not added.
+#### When does loop stop?
+Condition: i > 1
+Loop stops when: $i≤1$
+Substitute: $n^{(1/2)^k}≤1$
+We know: $n^0=1$
+So we want: $(1/2)^k$ → very small (close to 0)
+But Exponent never becomes exactly 0  
+So we use **approximation**, not exact equality.
+#### What is “small enough”?
+We use a known useful value:
+$$n^{1/logn}≈constant$$
+So when exponent ≈ $1/logn$ , value becomes small (≈2)
+We say: $$(1/2)^k \approx 1/logn$$
+It is Not exact equality. Just a **threshold comparison**.
+$1/2^k\approx1/logn$
+Multiply both sides by $2^k$
+$1\approx2^k/logn$
+Multiply both sides by $log⁡n$.
+$2^k\approx logn$
+Take log both side.
+$log(2^k)=log(logn)$
+Apply log rule.
+$klog2=log(logn)$
+so we get.
+$$k \approx log(logn)$$
+##### Linear
+i = i - 1 => O(n)
+##### Divide
+i = i / 2 => O(log n)
+##### Square root
+i = √i => O(log logn)
+
+| Operation | Effect                           |
+| --------- | -------------------------------- |
+| subtract  | slow                             |
+| divide    | faster                           |
+| √         | **very fast (shrinks exponent)** |
