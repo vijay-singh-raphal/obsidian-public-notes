@@ -318,3 +318,17 @@ i = √i => O(log logn)
 | subtract  | slow                             |
 | divide    | faster                           |
 | √         | **very fast (shrinks exponent)** |
+## Time Complexity vs Constraints
+|Input Size (n)|O(1)|O(log n)|O(n)|O(n log n)|O(n²)|O(n³)|O(2ⁿ), O(n!)|
+|---|---|---|---|---|---|---|---|
+|n ≤ 10|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|n ≤ 20|Yes|Yes|Yes|Yes|Yes|Limit|Yes (small n)|
+|n ≤ 100|Yes|Yes|Yes|Yes|Yes|Limit|No|
+|n ≤ 1,000|Yes|Yes|Yes|Yes|Limit|No|No|
+|n ≤ 10⁴|Yes|Yes|Yes|Yes|Limit|No|No|
+|n ≤ 10⁵|Yes|Yes|Yes|Yes|No|No|No|
+|n ≤ 10⁶|Yes|Yes|Yes|Limit|No|No|No|
+|n ≥ 10⁷|Yes|Yes|Limit|No|No|No|No|
+- **Yes** → Safe (won’t TLE)
+- **Limit** → Risky (depends on language / constants)
+- **No** → Will likely TLE
