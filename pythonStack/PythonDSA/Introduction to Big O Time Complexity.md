@@ -79,9 +79,19 @@ Techniques to simplify Big O Expression.
 - Drop insignificant terms $O(N^3 + 100N) => O(N^3)$
 - Different input parameters no drop $O(N^3 + M)$
 ##### Logarithm
+Algorithm that cuts I/P in half at every step then that relation is log n.
+#### Example
+$8 -> 4 -> 2 -> 1 => 3$ checks only. => $log 8 = 3$
+If you double I/P we have to perform only 1 extra operation.
+$16 -> 8 -> 4 -> 2 -> 1$ => 4 checks only.
 $logn$ => It means $\log_2 n$ in coding.
 $\log_2 16$ => $2^4 = 16$
 $\log_2 8 = 2^3 = 8$
+##### How log is better than N?
+$2^{10} = 1024$
+$2^{20} = 1048576$
+- n increased $1000x$
+- log n increased only 10 -> 20
 $$f(n) = n^2 + 3n$$
 $$f(n) = 2n^2 + 5n$$
 $$f(n)=2n^2 + 5n$$
