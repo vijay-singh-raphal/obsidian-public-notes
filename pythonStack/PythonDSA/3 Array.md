@@ -1,0 +1,13 @@
+# Abstract Data Type of array
+- Access -> S, T = O(1)
+- Set -> S, T = O(1)
+- Traverse / Search -> T = O(n) , S = (1)
+- Copy -> S,T = O(n)
+- Insert
+	- First -> T = O(n),  S = O(1)
+	- End -> T = O(1),  S = O(1)
+	- Between -> T = O(n),  S = O(1)
+- Remove
+	- First -> T = O(n),  S = O(1)
+	- End -> T = O(n),  S = O(1)
+	- Between -> T = O(n),  S = O(1)
