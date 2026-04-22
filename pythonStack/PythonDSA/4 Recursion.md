@@ -46,3 +46,49 @@ def factorial(n):
 
 print(factorial(5))
 ```
+## What is “Recursive Leap of Faith”?
+It is a mindset used while solving recursion problems:
+**Assume that the recursive function will correctly solve the smaller sub-problem**, and focus only on how to use that result to solve the bigger problem.
+#### Example print the sequence 321123
+### Identify the Sub-problem
+- Break the problem into a smaller version of the same problem.
+Original: 3 2 1 1 2 3  
+Sub-problem: 2 1 1 2
+- Same pattern, just smaller input.
+### Trust / Faith
+- You must **trust recursion**:
+    - Assume the recursive call works correctly for smaller inputs
+- Do NOT try to simulate every recursive step mentally
+- Assume:
+	- If the function works for smaller input, it will work for larger input
+### Base Condition
+- Defines when recursion should stop
+- If n == 0 → return
+```python
+def seq(n):
+    if n == 0:
+        return 
+    print(n)
+    seq(n - 1)
+    print(n)
+seq(3)
+```
+# Visualizing Recursion
+#### Recursion Tree
+                seq(3)
+               /      \
+        print(3)     print(3)
+             |
+            seq(2)
+           /      \
+    print(2)     print(2)
+         |
+        seq(1)
+       /      \
+print(1)     print(1)
+     |
+    seq(0)
+     |
+   return
+#### Recursion Call Stack
+![[recursionStack.png]]
