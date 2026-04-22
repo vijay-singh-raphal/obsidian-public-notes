@@ -101,15 +101,16 @@ Given an integer array, return:
 - Time Complexity: `O(n)`
 - Space Complexity: `O(1)`
 ```python
-def monotonic_array(array):
-	n = len(array)
-	if n == 0 :
-		return
-	first = array[0]
-	last = array[n-1]
-	
-	if first > last:
-		for k in range(n-1):
-			if array[k] < array[k+1]:
-				return false
+def monotonic_array(arr):
+    n = len(arr)
+    if n <= 1:
+        return True  
+    increasing = True
+    decreasing = True
+    for i in range(n - 1):
+        if arr[i] > arr[i + 1]:
+            increasing = False
+        if arr[i] < arr[i + 1]:
+            decreasing = False
+    return increasing or decreasing
 ```
