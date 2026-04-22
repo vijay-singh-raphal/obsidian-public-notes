@@ -18,3 +18,31 @@ def func(n):
     func(n + 1)
 func(1)
 ```
+## Stack Behavior
+- Each recursive call is stored in the **call stack**
+- If no base condition is provided → **Stack Overflow Error**
+## When to Use Recursion?
+Use recursion when:
+- The problem can be broken into **smaller sub-problems**
+- Each sub-problem is **similar to the original problem**
+- Solving sub-problems helps solve the main problem
+## Divide and Solve
+Recursion works best when:
+- Problem → divided into smaller pieces
+- Smaller pieces → solved recursively
+- Final answer → built from those solutions
+#### Example: Factorial
+Find factorial of a number `n`
+$$ n! = n × (n-1) × (n-2) × ... × 1 $$
+$$ 5! = 5 × 4 × 3 × 2 × 1 $$
+**Recursive case :**$$ n! = n × (n-1)! $$
+**Base case :**
+$$ 1! = 1 , 0! = 1 $$
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))
+```
