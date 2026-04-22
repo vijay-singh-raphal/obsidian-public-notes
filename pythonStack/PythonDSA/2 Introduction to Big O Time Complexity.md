@@ -310,7 +310,7 @@ $$k \approx log(logn)$$
 i = i - 1 => O(n)
 ##### Divide
 i = i / 2 => O(log n)
-##### Square root
+##### Root
 i = √i => O(log logn)
 
 | Operation | Effect                           |
