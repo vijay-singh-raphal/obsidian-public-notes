@@ -165,3 +165,22 @@ def fib(n):
 $F(2) = F(1) + F(0) = 1 + 0 = 1$
 $F(3) = F(2) + F(1) = 1 + 1 = 2$
 Result = > $F(3) = 2$
+```python
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+
+def print_series(n):
+    for i in range(n):
+        print(fib(i), end=" ")
+```
+$O(2^n)$
+```python
+def print_fib(n, a=0, b=1):
+    if n == 0:
+        return
+    print(a, end=" ")
+    print_fib(n-1, b, a+b)
+```
+$O(n)$
