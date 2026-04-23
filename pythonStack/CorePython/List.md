@@ -151,3 +151,102 @@ for i in range(len(matrix)):
     for j in range(len(matrix[i])):
         print(matrix[i][j])
 ```
+# Sorting, Copying & Advanced List Concepts
+### Sorting Lists
+```python
+lst.sort() # Sorts list in ascending order
+```
+### Descending Order
+```python
+lst.sort(reverse=True)
+```
+- `sort()` **modifies original list**
+- Returns **None**
+### Custom Sorting
+### By Length
+```python
+words = ["apple", "kiwi", "banana"]
+words.sort(key=len)
+```
+
+### Copying Lists
+### Reference Copy
+```python
+a = [1,2,3]
+b = a
+```
+Both point to **same memory**
+```python
+b[0] = 100
+print(a)   # [100,2,3]
+```
+### Shallow Copy
+```python
+b = a.copy()
+# OR
+b = list(a)
+# OR
+b = a[:]
+```
+New list created  
+But inner objects still shared
+### Deep Copy
+```python
+import copy
+b = copy.deepcopy(a)
+```
+Completely independent copy
+### Membership Operator
+```python
+3 in lst
+```
+Returns:
+- `True` or `False`
+### List Unpacking
+```python
+a, b, c = [1,2,3]
+a, *rest = [1,2,3,4]
+```
+### Joining Lists
+```python
+a + b
+
+a.extend(b)   # modifies a
+a + b         # new list
+```
+### Repeating Lists
+```python
+[1,2] * 3
+
+[1,2,1,2,1,2]
+```
+### Pitfall
+```python
+matrix = [[0]*3]*3
+
+matrix[0][0] = 1
+print(matrix)
+
+[[1,0,0],
+ [1,0,0],
+ [1,0,0]]
+```
+All rows changed (shared reference)
+```python
+lst = [1,2,2,3]
+
+for x in lst:
+    if x == 2:
+        lst.remove(x)
+```
+- Skips elements
+- Unexpected behavior
+### When to Use List vs Other DS
+
+| Data Structure | Use Case                     |
+| -------------- | ---------------------------- |
+| `list`         | General purpose              |
+| `set`          | Fast lookup, unique values   |
+| `dict`         | Key-value mapping            |
+| `deque`        | Fast insert/delete from ends |
+| `array`        | Numeric heavy data           |
