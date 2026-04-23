@@ -92,3 +92,76 @@ print(1)     print(1)
    return
 #### Recursion Call Stack
 ![[recursionStack.png]]
+# **Ways to Write Base Condition**
+- Base condition tells **when to stop recursive calls**
+- It prevents infinite recursion and starts **returning values**
+## **Two Ways to Define Base Condition**
+### **1. Last Valid Input**
+- The last input for which recursion should still work
+- After this, recursion should stop
+**Example (Factorial):**
+- Last valid input = **1**
+$$n!=n×(n−1)×(n−2)×⋯×2×1$$
+- So, base condition:
+```python
+if n == 1:
+    return 1
+```
+### **2. First Invalid Input**
+
+- The first input where recursion should NOT continue
+- Used to stop recursion earlier
+
+**Example (Factorial):**
+- First invalid input = **0 (or less depending on problem)**
+- So, base condition:
+```python
+if n == 0:
+    return 1
+```
+## **Example: Print n to 1**
+### Logic:
+- Keep printing until input becomes invalid
+```python
+def print_n_to_1(n):
+    if n < 1:   # First invalid input
+        return
+    print(n)
+    print_n_to_1(n - 1)
+```
+- **Last valid input** (`n == 1`)
+- **First invalid input** (`n < 1`)
+# **Recurrence Relation**
+A **recurrence relation** expresses the solution of a problem as a function of the solutions to **smaller instances of the same problem**.
+- Break a problem into **smaller subproblems**
+- Solve those sub-problems
+- Combine their results to get the final solution
+## **Factorial of a Positive Integer**
+A recurrence relation for factorial:
+$$F(n)=n×F(n−1)$$
+- To compute `F(n)`, we need the value of `F(n-1)`
+- This continues until we reach the base case
+# **How to Solve Recursion Questions**
+- If you can **draw the recursion tree**, you can **easily solve any recursion problem**
+## **Example: Fibonacci Series**
+### **Sequence**
+0, 1, 1, 2, 3, 5, ...
+## **Recurrence Relation**
+$$F(n)=F(n−1)+F(n−2)$$
+#### Base Conditions
+F(0) = 0
+F(1) = 1
+        F(3)
+       /    \
+    F(2)    F(1)
+   /   \
+F(1)  F(0)
+```python
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+```
+$F(2) = F(1) + F(0) = 1 + 0 = 1$
+$F(3) = F(2) + F(1) = 1 + 1 = 2$
+Result = > $F(3) = 2$
