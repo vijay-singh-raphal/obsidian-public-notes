@@ -165,6 +165,7 @@ def fib(n):
 $F(2) = F(1) + F(0) = 1 + 0 = 1$
 $F(3) = F(2) + F(1) = 1 + 1 = 2$
 Result = > $F(3) = 2$
+$O(2^n)$
 ```python
 def fib(n):
     if n <= 1:
@@ -176,6 +177,13 @@ def print_series(n):
         print(fib(i), end=" ")
 ```
 $O(2^n)$
+
+| Aspect          | Case 2 | Case 1 |
+| --------------- | ------ | ------ |
+| Recursion trees | 1      | n      |
+| Work done       | less   | more   |
+| Big-O           | same   | same   |
+| Actual runtime  | faster | slower |
 ```python
 def print_fib(n, a=0, b=1):
     if n == 0:
