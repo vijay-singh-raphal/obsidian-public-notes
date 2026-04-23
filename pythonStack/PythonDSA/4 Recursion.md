@@ -192,3 +192,41 @@ def print_fib(n, a=0, b=1):
     print_fib(n-1, b, a+b)
 ```
 $O(n)$
+# **Recursion Approaches**
+You can write recursive solutions in two ways:
+### **1. From 0 → n (Forward Recursion)**
+- Start from **0 (or initial value)** and move towards **n**
+### **2. From n → 0 (Backward Recursion)**
+- Start from **n** and reduce towards **0**
+#### Find Sum of First n Numbers
+$$1+2+3+⋯+n$$
+## **Approach 1: 0 → n**
+```python
+def sum(curr, n):
+    if curr == n:
+        return n
+    return curr + sum(curr + 1, n)
+```
+$sum(0,5)$ 
+$= 0 + sum(1,5)$  
+$= 0 + 1 + sum(2,5)$ 
+$= 0 + 1 + 2 + sum(3,5)$  
+$= 0 + 1 + 2 + 3 + sum(4,5)$  
+$= 0 + 1 + 2 + 3 + 4 + sum(5,5)$  
+$= 0 + 1 + 2 + 3 + 4 + 5$  
+$= 15$
+## **Approach 2: n → 0**
+```python
+def sum(n):
+    if n == 0:
+        return 0
+    return n + sum(n - 1)
+```
+$sum(5)$
+$= 5 + sum(4)$
+$= 5 + 4 + sum(3)$
+$= 5 + 4 + 3 + sum(2)$
+$= 5 + 4 + 3 + 2 + sum(1)$
+$= 5 + 4 + 3 + 2 + 1 + sum(0)$
+$= 5 + 4 + 3 + 2 + 1 + 0$
+$= 15$
