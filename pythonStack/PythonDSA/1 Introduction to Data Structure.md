@@ -13,9 +13,10 @@ These are collections of data values stored in sequence.
 To write efficient code and crack coding interviews.
 #### Problem Solving Flow
 Input → Algorithm → Output
-a,b                                           s
-         s = a + b 
-         data
+Input: a, b
+Process (Algorithm): s = a + b
+Output: s
+`a = 3, b = 5, s = 8` → **data (values)**
 Data structures help in managing data properly while designing algorithms.
 ## Why Different Data Structures Exist
 A problem can often be solved in **multiple ways**.
