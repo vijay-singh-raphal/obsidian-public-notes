@@ -48,13 +48,26 @@ d["name"]
 ```
 ### Using `get()`
 ```python
-d.get("name")
-d.get("salary", 0)
-# No error (safe access)
+d.get("age") # 25  
+d.get("salary") # None  
+d.get("salary", 0) # 0
 ```
 ### Checking Key
 ```python
 "name" in d
 ```
+# Updating Dictionary
 
+### Add / Modify Value
+```python
+d["age"] = 30
+```
+### Using `update()`
+```python
+d.update({"city": "Delhi"})
+# Add multiple values
+```
+### Removing Elements
+```python
 
+```
