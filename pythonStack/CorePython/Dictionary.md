@@ -67,7 +67,36 @@ d["age"] = 30
 d.update({"city": "Delhi"})
 # Add multiple values
 ```
-### Removing Elements
+# Removing Elements
+### pop(key)
 ```python
-
+d.pop("age")
+# Removes key and returns value
 ```
+### popitem()
+```python
+d.popitem()
+# Removes last inserted item
+```
+### clear()
+```python
+d.clear()
+# Removes everything
+```
+# Looping Through Dictionary 
+### Loop Through Keys
+```python
+for k in d:
+    print(k)
+```
+### Loop Through Values
+```python
+for v in d.values():
+    print(v)
+```
+### Loop Through Key-Value Pairs
+```python
+for k, v in d.items():
+    print(k, v)
+```
+
