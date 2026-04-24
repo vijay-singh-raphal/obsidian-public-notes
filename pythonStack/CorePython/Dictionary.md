@@ -99,4 +99,22 @@ for v in d.values():
 for k, v in d.items():
     print(k, v)
 ```
+#### Write a program to count the frequency of elements in list.
+```python
+d = {}
 
+for x in lst:
+    d[x] = d.get(x, 0) + 1
+```
+# Nested Dictionary 
+## What is it?
+Dictionary inside another dictionary
+```python
+user = {
+    "name": "Rahul",
+    "address": {
+        "city": "Delhi",
+        "pincode": 110001
+    }
+}
+```
