@@ -14,6 +14,9 @@ A **short and efficient way** to create collections (list, set, dict)
 names = ["a", "b", "c"]
 upper = [x.upper() for x in names]
 
+words = [" a ", " b ", " c "]
+[word.strip() for word in words]
+
 [x for x in range(5) if x]
 ```
 # Set Comprehension
@@ -33,6 +36,13 @@ upper = [x.upper() for x in names]
 {x: x*x for x in range(5) if x % 2 == 0}
 ```
 
-# Nested Comprehension ⭐
+# Nested Comprehension
 ### What is it?
 A comprehension **inside another loop**
+```python
+# Flatten Matrix
+matrix = [[1,2], [3,4]]
+[num for row in matrix for num in row]
+
+[(i, j) for i in range(2) for j in range(2)]
+```
