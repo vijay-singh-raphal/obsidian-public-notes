@@ -107,7 +107,7 @@ for x in lst:
     d[x] = d.get(x, 0) + 1
 ```
 # Nested Dictionary 
-## What is it?
+### What is it?
 Dictionary inside another dictionary
 ```python
 user = {
@@ -118,3 +118,24 @@ user = {
     }
 }
 ```
+### Accessing Nested Values
+```python
+user["address"]["city"]
+```
+# Merging Dictionaries ⭐
+### Method 1: Using `|` (Python 3.9+)
+```python
+d3 = d1 | d2
+```
+### Method 2: Using `update()`
+```python
+d1.update(d2)
+# Modifies original dictionary
+
+d1 = {"a":1}
+d2 = {"a":2}
+
+d1.update(d2)
+# overwrite the key
+```
+
