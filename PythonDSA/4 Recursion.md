@@ -85,11 +85,11 @@ seq(3)
          |
         seq(1)
        /      \
-print(1)     print(1)
+	print(1)     print(1)
      |
     seq(0)
      |
-   return
+	   return
 #### Recursion Call Stack
 ![[recursionStack.png]]
 # **Ways to Write Base Condition**
@@ -151,11 +151,7 @@ $$F(n)=F(n−1)+F(n−2)$$
 #### Base Conditions
 F(0) = 0
 F(1) = 1
-        F(3)
-       /    \
-    F(2)    F(1)
-   /   \
-F(1)  F(0)
+![[f3.png|400]]
 ```python
 def fib(n):
     if n <= 1:
