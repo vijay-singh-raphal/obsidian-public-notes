@@ -49,7 +49,7 @@ If N = 5 so number of operations are 7.
 If N= 1000 so number of operations are
 $$ 2 * 1000 - 3 = 1997 $$
 If we use n*(n-1)/2 there are 3 OP only
-$$ 1000 * (1000 - 1) / 2 $$
+$$1000 * (1000 - 1) / 2$$
 As input size increases, how does the number of operations grow?
 This is the core idea of **Time Complexity**.
 #### Time Complexity
