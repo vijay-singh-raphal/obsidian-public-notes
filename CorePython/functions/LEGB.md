@@ -80,3 +80,8 @@ def show():
 name = "Python"
 show()
 ```
+## # Mistake
+```python
+print = 10
+print("Hello")
+```
