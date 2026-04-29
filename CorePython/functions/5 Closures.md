@@ -20,3 +20,36 @@ When `outer()` returns:
 - Normally variables should be destroyed  
     But NOT here
 Because `inner` is still using `x`
+#### Example
+```python
+def counter():
+    count = 0
+
+    def increment():
+        nonlocal count
+        count += 1
+        return count
+
+    return increment
+
+c = counter()
+print(c())  # 1
+print(c())  # 2
+```
+- `count` persists across calls
+- State is maintained
+## Use Case
+```python
+def multiplier(n):
+    def multiply(x):
+        return x * n
+    return multiply
+
+double = multiplier(2)
+triple = multiplier(3)
+
+print(double(5))  # 10
+print(triple(5))  # 15
+
+print(f.__closure__)
+```
