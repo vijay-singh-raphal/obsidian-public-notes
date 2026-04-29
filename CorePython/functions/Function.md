@@ -263,3 +263,4 @@ When `add(x, y)` is called:
 - `30` returned
 - Stack frame **deleted**
 - `result = 30` stored in global namespace
+![[execution.png| 800]]
