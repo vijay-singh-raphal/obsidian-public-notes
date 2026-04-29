@@ -193,3 +193,27 @@ def test():
 
 # None
 ```
+# **Function Execution Flow**
+### When you call a function:
+### Steps:
+1. **Python looks for function name** (in global scope)
+2. **Finds function object in heap**
+3. **Creates a new stack frame**
+4. Executes function code
+5. Returns result
+6. **Removes stack frame**
+Heap → stores objects (functions, lists, etc.)  
+Stack → handles execution (function calls)
+```python
+def add(a, b):
+    c = a + b
+    return c
+
+add(2, 3)
+```
+- `add` → stored in heap
+- Call `add(2,3)` → new stack frame created
+- `a=2`, `b=3` inside frame
+- `c=5`
+- return `5`
+- frame destroyed
