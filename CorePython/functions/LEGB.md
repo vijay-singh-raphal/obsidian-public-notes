@@ -73,3 +73,10 @@ def increase():
 ```
 Without `global` → error  
 Because Python assumes it's local
+```python
+def show():
+    print(name)
+
+name = "Python"
+show()
+```
