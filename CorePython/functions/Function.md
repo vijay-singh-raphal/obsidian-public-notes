@@ -217,3 +217,49 @@ add(2, 3)
 - `c=5`
 - return `5`
 - frame destroyed
+## **Python Memory Model (Global Namespace, Stack, Heap)**
+# **Three Core Areas**
+Python manages memory in **three main parts**:
+### Global Namespace
+- Stores:
+    - Global variables
+    - Function names
+- Exists for the **entire program lifecycle**
+### Stack (Call Stack)
+- Stores:
+    - Function calls
+    - Local variables
+- Works like:
+	- Last In → First Out (LIFO)
+### Heap
+- Stores:
+    - Objects (lists, dicts, functions, etc.)
+#### Example
+```python
+def add(a, b):
+    c = a + b
+    return c
+
+x = 10
+y = 20
+result = add(x, y)
+```
+### Step 1: Global Namespace
+- `add` → function reference
+- `x = 10`, `y = 20`
+- `result` (not yet assigned)
+### Step 2: Heap
+- Objects created:
+    - `10`, `20`
+    - Function object `add`
+### Step 3: Stack (Function Call)
+When `add(x, y)` is called:
+- New **stack frame** created
+- Inside frame:
+    - `a = 10`
+    - `b = 20`
+    - `c = 30`
+### Step 4: Return
+- `30` returned
+- Stack frame **deleted**
+- `result = 30` stored in global namespace
