@@ -264,3 +264,62 @@ When `add(x, y)` is called:
 - Stack frame **deleted**
 - `result = 30` stored in global namespace
 ![[execution.png| 800]]
+## **Dynamic Dispatch
+The method that gets executed is decided at runtime**, not before the program runs.
+```python
+a = 10
+b = "Hello"
+
+print(a + 5)
+print(b + " world")
+```
+Same operator: `+`  
+Different behavior:
+
+|Type|Operation|
+|---|---|
+|int|addition|
+|str|concatenation
+## How Python decides?
+At runtime:
+1. Look at object type
+2. Find corresponding method
+3. Execute that method
+```python
+x + y
+
+x.__add__(y)
+
+x = 10
+y = 5
+int.__add__(x, y)
+
+x = "Hello"
+y = "World"
+str.__add__(x, y)
+```
+#### Example
+```python
+def process(x):
+    return x + x
+
+print(process(10))      # 20
+print(process("Hi"))    # "HiHi"
+```
+# Dynamic Dispatch with Classes
+```python
+class Dog:
+    def speak(self):
+        print("Woof")
+
+class Cat:
+    def speak(self):
+        print("Meow")
+
+def animal_sound(animal):
+    animal.speak()
+
+animal_sound(Dog())
+animal_sound(Cat())
+```
+![[dynamic.png|800]]
