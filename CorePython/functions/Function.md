@@ -91,3 +91,105 @@ print(nums)
 - `nums` and `lst` → both point to SAME list
 - `.append()` modifies object **in-place**
 “You cannot rebind caller variable, but you can mutate mutable objects.”
+#### Question
+```python
+def tricky(x):
+    x = x + [4]
+
+lst = [1,2,3]
+tricky(lst)
+print(lst)
+```
+- `x + [4]` → creates NEW list
+- Doesn't modify original
+## Parameter vs Argument
+
+|Term|Meaning|
+|---|---|
+|Parameter|Variable in function definition|
+|Argument|Actual value passed|
+```python
+def add(a, b):   # a, b → parameters
+    return a + b
+
+add(2, 3)        # 2, 3 → arguments
+```
+# Types of Arguments
+## Positional Arguments
+Order **matters**
+```python
+def sub(a, b):
+    return a - b
+
+sub(5, 2)   # a=5, b=2
+```
+## Keyword Arguments
+Order **does NOT matter**
+```python
+def sub(a, b):
+    return a - b
+
+sub(b=2, a=5)
+```
+Python matches by **name**, not position
+## Default Arguments
+Provide default values
+```python
+def greet(name="Guest"):
+    return "Hello " + name
+
+greet()        # Hello Guest
+greet("Ram")   # Hello Ram
+```
+# **Mutable Default Arguments**
+## Problem Code
+```python
+def add_item(item, my_list=[]):
+    my_list.append(item)
+    return my_list
+
+print(add_item(1))
+print(add_item(2))
+print(add_item(3))
+```
+**NOTE** This looks wrong if you expect a fresh list each time.
+### REASON
+Default arguments are created **ONLY ONCE** when the function is **defined**, not when called.
+So:
+- `my_list=[]` is created once
+- Same list reused every call
+## Correct Code
+```python
+def add_item(item, my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(item)
+    return my_list
+
+print(add_item(1))
+print(add_item(2))
+print(add_item(3))
+```
+# **Return Statement**
+### From your notes:
+A function can return:
+- One value
+- Multiple values (as tuple)
+- Nothing (`None` by default)
+#### Single Return
+```python
+def square(x):
+    return x * x
+```
+#### Multiple Return
+```python
+def coordinates():
+    return 10, 20
+```
+#### No Return
+```python
+def test():
+    pass
+
+# None
+```
