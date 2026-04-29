@@ -85,3 +85,20 @@ show()
 print = 10
 print("Hello")
 ```
+# **Enclosing Scope Modification (`nonlocal`)**
+We already saw:
+- Local → inside function
+```python
+def outer():
+    x = 10
+
+    def inner():
+        nonlocal x
+        x = x + 5
+        print(x)
+
+    inner()
+    print(x)
+
+outer()
+```
