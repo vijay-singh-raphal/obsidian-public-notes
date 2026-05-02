@@ -342,3 +342,13 @@ $$2^{\log⁡_2n}=n$$
 |2 recursive calls, reduce by 1|O(2ⁿ)|
 |2 recursive calls, reduce by half|O(n)|
 |1 call, reduce by half|O(log n)|
+#### Question K - th Symbol in Grammar.
+You are given a grammar sequence defined as follows:
+1. The first row is:
+```python
+Row 1: 0
+```
+2. 2. For every next row:
+- Replace each **0** with **01**
+- Replace each **1** with **10**
+#
