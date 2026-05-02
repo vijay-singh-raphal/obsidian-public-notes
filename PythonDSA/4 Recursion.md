@@ -226,3 +226,30 @@ $= 5 + 4 + 3 + 2 + sum(1)$
 $= 5 + 4 + 3 + 2 + 1 + sum(0)$
 $= 5 + 4 + 3 + 2 + 1 + 0$
 $= 15$
+# Complexity Analysis 
+You drew a **recursion tree**
+**T → [number of nodes] × [work done in each node]**
+Let’s simplify:
+- Each recursive call = 1 node
+- Total time depends on:
+    - how many calls are made
+    - work per call
+- **Leaf nodes (base case)** → simple return (constant work)
+- **Internal nodes** → do computation + recursive call
+```python
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+```
+```python
+fib(5)
+├── fib(4)
+│   ├── fib(3)
+│   │   ├── fib(2)
+│   │   └── fib(1)
+│   └── fib(2)
+└── fib(3)
+    ├── fib(2)
+    └── fib(1)
+```
