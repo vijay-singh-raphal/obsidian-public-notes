@@ -288,5 +288,50 @@ n = 7 → 41
 2^5 = 32
 2^6 = 64
 ```
-- Actual calls are **less than 2ⁿ**
+- Actual calls are **less than $2ⁿ$**
 - But they grow **in the same exponential pattern**
+### How to calculate nodes without drawing full tree
+Number of nodes comes from:
+**Branching factor + height of recursion**
+
+| Case          | Nodes                      |
+| ------------- | -------------------------- |
+| Branching = 1 | Nodes = height             |
+| Branching ≥ 2 | Nodes ≈ (branching)^height |
+If recursion is a **chain → O(n)**  
+If recursion is a **tree → exponential or polynomial**
+#### Step 1 Count how many recursive calls per function
+```python
+fib(n):
+    return fib(n-1) + fib(n-2)
+```
+Calls = **2**
+So:
+Branching factor = 2
+#### Step 2 Find height
+- Worst path: `n → n-1 → n-2 → ... → 1 → 0`
+- So depth = **n**
+#### Step 3 Use formula
+Total nodes ≈ **(branching factor)^(height)**
+$2^n$
+Nodes ≈ $2^n$
+T(n) = $O(2^n)$
+## Example 2 sum(n)
+```python
+sum(n):
+    return n + sum(n-1)
+```
+Branching = 1 so Nodes = Height
+$T(n) = O(n)$
+## Example 3: Binary recursion but reduced height
+```python
+f(n):
+    return f(n/2) + f(n/2)
+```
+- Calls per node = 2
+- Height = log n
+- Nodes ≈ 2^(log n) = n
+- T(n) = O(n)
+$$a^{\log_a​n}=n$$
+So specifically:
+$$2^{\log⁡_2n}=n$$
