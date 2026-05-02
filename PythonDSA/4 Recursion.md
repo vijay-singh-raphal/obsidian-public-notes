@@ -242,14 +242,24 @@ def fib(n):
         return n
     return fib(n-1) + fib(n-2)
 ```
+![fibo|500](https://images.openai.com/static-rsc-4/qCFaRKTdAAkXebHCXDxpXsHWSw1ifBKr7o-DQWS5jfnMa8XH6Pb0pCTfbt9DMph2Pcc2Icohwvi50wF15mxAN5G_9XEddjEwzp_FnL4leEhO1bwAcYImUog1Si3iun9qNtEoDD6MbuYongSILZHXprUsy7wHOpjl0ls4fOyVMBH-HTMJSxDYpLcSv62dybJ6?purpose=fullsize)
+## Count Number of Nodes
+Each function call = **1 node**
+Total nodes grow like this:
 ```python
-fib(5)
-├── fib(4)
-│   ├── fib(3)
-│   │   ├── fib(2)
-│   │   └── fib(1)
-│   └── fib(2)
-└── fib(3)
-    ├── fib(2)
-    └── fib(1)
+n=1 → 1 call
+n=2 → 3 calls
+n=3 → 5 calls
+n=4 → 9 calls
+n=5 → 15 calls
+```
+This is approximately:
+**Number of nodes ≈ O(2ⁿ)**
+- Each node creates **2 children**
+- So tree grows **exponentially**
+## Apply Formula
+**T → [number of nodes] × [work per node]**
+```python
+T(n) = O(2ⁿ) × O(1)
+     = O(2ⁿ)
 ```
