@@ -335,3 +335,10 @@ f(n):
 $$a^{\log_a​n}=n$$
 So specifically:
 $$2^{\log⁡_2n}=n$$
+
+|Pattern|Complexity|
+|---|---|
+|1 recursive call, reduce by 1|O(n)|
+|2 recursive calls, reduce by 1|O(2ⁿ)|
+|2 recursive calls, reduce by half|O(n)|
+|1 call, reduce by half|O(log n)|
