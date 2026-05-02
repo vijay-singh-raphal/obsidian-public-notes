@@ -263,4 +263,30 @@ This is approximately:
 T(n) = O(2ⁿ) × O(1)
      = O(2ⁿ)
 ```
- 
+If complexity is **$O(2ⁿ)$**, then for n = 5 → 2⁵ = 32. But we got only **15 calls**, not 32. So why $O(2ⁿ)$?
+**Big-O is NOT exact count**  
+It is an **upper bound (growth rate)**
+- One call → makes **2 recursive calls**
+- Tree grows like binary tree
+- "Number of nodes = exponential"
+## Actual calls for Fibonacci:
+```python
+n = 1 → 1
+n = 2 → 3
+n = 3 → 5
+n = 4 → 9
+n = 5 → 15
+n = 6 → 25
+n = 7 → 41
+```
+## Now compare with powers of 2:
+```python
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16
+2^5 = 32
+2^6 = 64
+```
+- Actual calls are **less than 2ⁿ**
+- But they grow **in the same exponential pattern**
