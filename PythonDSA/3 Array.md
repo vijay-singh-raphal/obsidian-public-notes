@@ -1,3 +1,107 @@
+# What are Arrays?
+An **array** is a **fundamental data structure** present in almost every programming language.  
+Arrays store elements in a **continuous block of memory**.
+### Key Idea
+- Arrays are stored in **contiguous (continuous) memory locations**
+- Elements are stored one after another
+- Arrays are usually **homogeneous**
+# Continuous Memory Allocation
+Suppose we write in Java:
+```java
+int[] arr = new int[10];
+```
+If:
+- `int = 4 bytes`
+- array size = `10`
+Then total memory required:
+$$10×4=40 bytes$$
+These 40 bytes are allocated **continuously in RAM**.
+# Arrays are Homogeneous
+All elements inside an array must be of the **same data type**.
+Example:
+```java
+int[] arr = new int[5];
+// allowed 1, 2, 3, 4
+// not allowed 1, "hello", 5.6
+```
+# Why Arrays are Fast?
+Arrays are fast because memory is continuous.
+This allows direct calculation of any element’s address.
+$$Address=Base Address+(Index×Size of Data Type)$$
+# Drawbacks of Arrays
+Arrays are very fast because they use **continuous memory allocation**.  
+But this same property also creates several limitations.
+## 1. Static Size (Fixed Size)
+Traditional arrays have a **fixed size**.
+Once the array is created:
+- size cannot be changed easily
+- memory is already reserved
+```java
+int[] arr = new int[10];
+```
+- array size = 10
+- fixed at creation time
+Suppose:
+- you created array of size 10
+- later you need 100 elements
+Problem:
+- array cannot grow automatically
+- new larger array must be created
+### Solution
+Modern languages solve this using:
+- Dynamic Arrays
+- ArrayList
+- Vector
+- Python List
+These structures internally resize themselves automatically.
+## 2. Insertion in Beginning or Middle is Inefficient
+This is one of the biggest drawbacks.
+Suppose array contains:
+```java
+10 20 30 40 50 60 70 80
+```
+Now insert `35` between `30` and `40`.
+### What Happens Internally?
+To create space:
+- 40 shifts right
+- 50 shifts right
+- 60 shifts right
+- 70 shifts right
+Then 35 is inserted.
+New array:
+```java
+10 20 30 35 40 50 60 70 80
+```
+### Why is This Slow?
+Because many elements must move.
+If insertion happens at beginning:
+- almost all elements shift
+This requires iteration through array.
+$$O(n)$$
+## 3. Deletion is Also Inefficient
+Suppose we delete `20`.
+Before deletion:
+```java
+10 20 30 40 50 60 70 80
+```
+After deleting `20`:
+- all elements shift left
+- ```java
+  10 30 40 50 60 70 80
+  ```
+### Why Deletion is Slow?
+Because:
+- elements must move to fill gap
+- requires traversal and shifting
+$$O(n)$$
+### Why Do These Problems Exist?
+Because arrays are:
+- Continuous in memory
+- Fixed in structure
+This continuity gives:
+- fast access
+But causes:
+- difficult insertion/deletion
 # Abstract Data Type of array
 - Access -> S, T = O(1)
 - Set -> S, T = O(1)
@@ -11,6 +115,50 @@
 	- First -> T = O(n),  S = O(1)
 	- End -> T = O(n),  S = O(1)
 	- Between -> T = O(n),  S = O(1)
+# Resizable Arrays (Dynamic Arrays / ArrayList / Vector) 
+Traditional arrays have a major drawback:
+- their size is fixed (static)
+To solve this problem, modern languages provide:
+- Dynamic Arrays
+- ArrayList
+- Vector
+- Python List
+These are called **Resizable Arrays**.
+```java
+ArrayList<Integer> arr = new ArrayList<>();
+```
+Internally:
+- a small array is created
+Suppose initial capacity = 2
+
+|Index|Value|
+|---|---|
+|0|empty|
+|1|empty|
+```java
+size = 0
+capacity = 2
+```
+## Amortized Time Complexity
+Since resizing does NOT happen every time:
+Average complexity becomes:
+$$O(1)$$
+This is called: Amortized O(1)
+## What is Amortized Complexity?
+Amortized complexity means:
+- some operations are expensive
+- most operations are cheap
+Average cost over many operations becomes small.
+## Drawbacks of Resizable Arrays
+### 1. Resizing Cost
+Copying elements can be expensive.
+### 2. Extra Memory Usage
+Unused capacity may exist.
+# Creating a List in Python
+```python
+brands = ["Tesla", "Skoda", "Toyota", "Suzuki"]
+```
+
 # Array problems
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
