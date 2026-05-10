@@ -346,9 +346,16 @@ return nums
 #### Problem 6
 Given an integer array `nums`, find the `subarray` with the largest sum, and return _its sum_.
 **Example 1:**
-**Input:** nums = [-2,1,-3,4,-1,2,1,-5,4]
+**Input:** `nums` = [-2,1,-3,4,-1,2,1,-5,4]
 **Output:** 6
 **Explanation:** The `subarray` [4,-1,2,1] has the largest sum 6.
+**`Kadane’s Algorithm Pattern`**
+At every index:
+You decide:
+- continue previous `subarray`
+- or discard it and start fresh
+The key insight is:
+A negative running sum is harmful for future sums.
 ```python
 from typing import List
 class Solution:
@@ -368,6 +375,7 @@ s = Solution()
 x = s.maxSubArray([-2,1])
 print(x)
 ```
+
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
