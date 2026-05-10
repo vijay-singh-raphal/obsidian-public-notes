@@ -170,6 +170,31 @@ brands = ["Tesla", "Skoda", "Toyota", "Suzuki"]
 |Reverse|O(n)|
 # Array problems
 #### Problem 1
+Given a binary array `nums`, return _the maximum number of consecutive_ `1`_'s in the array_.
+**Input:** `nums` = [1,1,0,1,1,1]
+**Output:** 3
+**Explanation:** The first two digits or the last three digits are consecutive `1s`. The maximum number of consecutive `1s` is 3.
+```python
+from typing import List
+class Solution:
+	def findMaxConsutiveOnes(self,nums:List[int])->int:
+		ans = 0
+		count = 0
+		n = len(nums)
+		for i in range(n):
+			if nums[i] == 1:
+				count = count+1
+			if ans < count:
+				ans = count
+			if nums[i] == 0:
+				count = 0
+		return ans
+
+s = Solution()
+x = s.findMaxConsutiveOnes([1,1,0,1,1,1,0,0,1,1,1,1,0,0,1])
+print(x)
+```
+#### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
 - $0≤len(nums)≤10^5$
