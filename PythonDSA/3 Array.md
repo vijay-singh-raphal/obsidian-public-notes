@@ -221,6 +221,40 @@ s = Solution()
 x = s.maxProfit([7,6,4,3,1])
 print(x)
 ```
+#### Problem 3
+Given an integer array `nums`, return _an array_ `answer` _such that_ `answer[i]` _is equal to the product of all the elements of_ `nums` _except_ `nums[i]`.
+You must write an algorithm that runs in `O(n)` time.
+**Example 1:**
+**Input:** `nums` = [1,2,3,4]
+**Output:** [24,12,8,6]
+```python
+from typing import List
+class Solution:
+	def productExceptSelf(self,nums:List[int])->List[int]:
+		pro= 1
+		zeroCount = nums.count(0)
+		n = len(nums)
+		for i in range(n):
+			if nums[i] != 0:
+				pro = pro*nums[i]
+		
+		newLst = []
+		for i in range(n):
+			if zeroCount >= 2:
+				newLst.append(0)
+			elif zeroCount == 1:
+				if nums[i] == 0:
+					newLst.append(pro)
+				else:
+					newLst.append(0)
+			else:
+				newLst.append(pro//nums[i])
+		return newLst
+
+s = Solution()
+x = s.productExceptSelf([0,2,0,4])
+print(x)
+```
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
