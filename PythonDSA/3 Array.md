@@ -310,6 +310,30 @@ s = Solution()
 x = s.productExceptSelf([1,2,3,4])
 print(x)
 ```
+#### Problem 5
+Given an integer array `nums`, rotate the array to the right by `k` steps, where `k` is non-negative.
+**Example 1:**
+**Input:** `nums` = [1,2,3,4,5,6,7], k = 3
+**Output:** [5,6,7,1,2,3,4]
+```python
+from typing import List
+class Solution:
+	def rotate(self,nums:List[int],k:int)->List[int]:
+		n = len(nums)
+		k = k % n
+		for i in range(k+1):
+			f = nums[0]
+			for j in range(n-1):
+				nums[j] = nums[j+1]
+			nums[n-1] = f
+return nums
+
+s = Solution()
+x = s.rotate([1,2,3,4,5,6,7],3)
+print(x)
+```
+### Fast version
+
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
