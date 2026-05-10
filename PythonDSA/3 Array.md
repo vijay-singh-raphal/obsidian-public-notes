@@ -159,6 +159,15 @@ Unused capacity may exist.
 brands = ["Tesla", "Skoda", "Toyota", "Suzuki"]
 ```
 
+|Operation|Time Complexity|
+|---|---|
+|Access|O(1)|
+|Append|O(1) amortized|
+|Pop End|O(1)|
+|Insert Middle|O(n)|
+|Remove Middle|O(n)|
+|Sort|O(n log n)|
+|Reverse|O(n)|
 # Array problems
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
