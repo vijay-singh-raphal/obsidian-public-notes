@@ -260,8 +260,36 @@ Given an integer array `nums`, return _an array_ `answer` _such that_ `answ
 The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
 You must write an algorithm that runs in `O(n)` time and without using the division operation.
 **Example 1:**
-**Input:** nums = [1,2,3,4]
+**Input:** `nums` = [1,2,3,4]
 **Output:** [24,12,8,6]
+### Prefix-Suffix Pattern
+$$ \prod_{j \ne i}nums[j] = (\prod_{j<i}nums[j])\times(\prod_{j>i}nums[j])$$
+$\prod$ this symbol means multiply everything (product notation)
+$\sum$ this means sum
+$\prod_{k=1}^4$ $k =1 \times 2 \times 3 \times 4 = 24$ 
+$j \ne i$ all j values except i
+For index `i = 2`:
+```python
+nums = [1, 2, 3, 4]
+```
+$\prod_{j<2} nums[j] = 1\times 2 => 2$
+$\prod_{j>2} nums[j] = 4 => 4$
+$multiply \quad both = 8$
+$which \quad is \quad the \quad product \quad of \quad all \quad element \quad except \quad 3.$
+
+| Name                  | Used For                    |
+| --------------------- | --------------------------- |
+| Prefix Sum            | cumulative sums             |
+| Prefix Product        | cumulative multiplication   |
+| Prefix Array          | generic preprocessing       |
+| Suffix Array          | right-side preprocessing    |
+| Left-Right Traversal  | two directional computation |
+| Preprocessing Pattern | preparing reusable data     |
+This pattern is a type of: Dynamic `Preprocessing`
+Meaning:
+- compute reusable information once
+- reuse many times
+
 ```python
 from typing import List
 class Solution:
