@@ -375,7 +375,36 @@ s = Solution()
 x = s.maxSubArray([-2,1])
 print(x)
 ```
+#### Problem 7
+Given an integer array `nums`, find a subarray that has the largest product, and return _the product_.
+The test cases are generated so that the answer will fit in a **32-bit** integer.
+**Note** that the product of an array with a single element is the value of that element.
+**Example 1:**
+**Input:** `nums` = [2,3,-2,4]
+**Output:** 6
+```python
+from typing import List
+class Solution:
+	def maxProduct(self,nums:List[int])->int:
+		maxPro = nums[0]
+		minPro = nums[0]
+		ans = nums[0]
+		n = len(nums)
+		for i in range(1,n):
+			if nums[i]>=0:
+				maxPro = max(nums[i],maxPro * nums[i])
+				minPro = min(nums[i],minPro * nums[i])
+			else:
+				temp = maxPro
+				maxPro = max(nums[i],minPro * nums[i])
+				minPro = min(nums[i],temp * nums[i])
+			ans = max(ans,maxPro)
+		return ans
 
+s = Solution()
+x = s.maxProduct([2,-5,-2,-4,3])
+print(x)
+```
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
