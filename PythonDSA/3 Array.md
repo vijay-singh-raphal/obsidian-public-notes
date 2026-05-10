@@ -333,7 +333,41 @@ x = s.rotate([1,2,3,4,5,6,7],3)
 print(x)
 ```
 ### Fast version
+```python
+class Solution:
+	def rotate(self,nums:List[int],k:int)->List[int]:
+		n = len(nums)
+		k = k % n
+		nums[:] = reversed(nums[:])
+		nums[:k] = reversed(nums[:k])
+		nums[k:] = reversed(nums[k:])
+return nums
+```
+#### Problem 6
+Given an integer array `nums`, find the `subarray` with the largest sum, and return _its sum_.
+**Example 1:**
+**Input:** nums = [-2,1,-3,4,-1,2,1,-5,4]
+**Output:** 6
+**Explanation:** The `subarray` [4,-1,2,1] has the largest sum 6.
+```python
+from typing import List
+class Solution:
+	def maxSubArray(self,nums:List[int])->int:
+		currentSum = nums[0]
+		ans = nums[0]
+		n = len(nums)
+		for i in range(1,n):
+			if currentSum < 0:
+				currentSum = 0
+			currentSum = currentSum + nums[i]
+			if ans < currentSum:
+				ans = currentSum
+		return ans
 
+s = Solution()
+x = s.maxSubArray([-2,1])
+print(x)
+```
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
