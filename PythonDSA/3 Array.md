@@ -332,7 +332,7 @@ s = Solution()
 x = s.rotate([1,2,3,4,5,6,7],3)
 print(x)
 ```
-### Fast version
+### Sol 2
 ```python
 class Solution:
 	def rotate(self,nums:List[int],k:int)->List[int]:
@@ -375,8 +375,25 @@ s = Solution()
 x = s.maxSubArray([-2,1])
 print(x)
 ```
+### Sol 2
+```python
+from typing import List
+class Solution:
+	def maxSubArray(self,nums:List[int])->int:
+		maxSum = nums[0]
+		ans = nums[0]
+		n = len(nums)
+		for i in range(1,n):
+			maxSum = max(nums[i],nums[i]+maxSum)
+			ans = max(maxSum,ans)
+		return ans
+
+s = Solution()
+x = s.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+print(x)
+```
 #### Problem 7
-Given an integer array `nums`, find a subarray that has the largest product, and return _the product_.
+Given an integer array `nums`, find a `subarray` that has the largest product, and return _the product_.
 The test cases are generated so that the answer will fit in a **32-bit** integer.
 **Note** that the product of an array with a single element is the value of that element.
 **Example 1:**
