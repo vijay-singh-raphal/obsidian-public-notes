@@ -541,47 +541,24 @@ class Solution:
 		return ans
 ```
 #### Problem 10
-## **Check if an Array is Monotonic**
-An array is said to be **monotonic** if it is either:
-- **Monotone Increasing**: All elements from left to right are **non-decreasing**  
-    (i.e., `arr[i] ≤ arr[i+1]` for all valid `i`)
-**OR**
-- **Monotone Decreasing**: All elements from left to right are **non-increasing**  
-    (i.e., `arr[i] ≥ arr[i+1]` for all valid `i`)
-##### **Task**
-Given an integer array, return:
-- `true` if the array is **monotonic**
-- `false` otherwise
-##### **Notes**
-- An empty array is considered **monotonic**
-- An array with only one element is also **monotonic**
-- Elements in the array may be **equal (duplicates allowed)**
-##### Monotonic
-[1, 2, 3] → true
-[1, 2, 3, 3] → true
-[1, 2, 2] → true
-[3, 2, 1] → true
-[3, 2, 1, 1] → true
-[3, 3, 3] → true
-##### Non Monotonic
-[2, 2, 3, 1] → false
-##### Edge Cases
-[7] → true
-[] → true
-##### **Constraints Insight**
-- Time Complexity: `O(n)`
-- Space Complexity: `O(1)`
+An array is **monotonic** if it is either monotone increasing or monotone decreasing.
+An array `nums` is monotone increasing if for all `i <= j`, `nums[i] <= nums[j]`. An array `nums` is monotone decreasing if for all `i <= j`, `nums[i] >= nums[j]`.
+Given an integer array `nums`, return `true` _if the given array is monotonic, or_ `false` _otherwise_.
+**Example 1:**
+**Input:** `nums` = [1,2,2,3]
+**Output:** true
 ```python
-def monotonic_array(arr):
-    n = len(arr)
-    if n <= 1:
-        return True  
-    increasing = True
-    decreasing = True
-    for i in range(n - 1):
-        if arr[i] > arr[i + 1]:
-            increasing = False
-        if arr[i] < arr[i + 1]:
-            decreasing = False
-    return increasing or decreasing
+class Solution:
+	def isMonotonic(self, nums: List[int]) -> bool:
+		isMonoInc = True
+		isMonoDec = True
+		n = len(nums)
+		for i in range(1,n):
+			if nums[i] < nums[i-1]:
+				isMonoInc = False
+			if nums[i] > nums[i-1]:
+				isMonoDec = False
+
+		return isMonoInc or isMonoDec
 ```
+
