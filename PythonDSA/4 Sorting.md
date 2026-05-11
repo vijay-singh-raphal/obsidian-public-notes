@@ -87,6 +87,7 @@ Selection Sort is one of the:
 - Simplest
 - Most beginner-friendly  sorting algorithms.
 It is even simpler than Bubble Sort in terms of understanding.
+Repeatedly select the smallest element from the unsorted part and place it at the beginning.
 ![selectionSort|500](https://studyalgorithms.com/wp-content/uploads/2014/01/selection-sort.jpg)
 ```python
 array = [30,20,60,40,10,50]
