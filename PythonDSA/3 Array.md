@@ -519,61 +519,26 @@ So:
 return False
 ```
 #### Problem 9
-Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
-##### **Constraints**
-- $0≤len(nums)≤10^5$
-- $−10^4≤nums[i]≤10^4$
-##### **Notes**
-- The input array may contain **negative numbers, zeros, and positive numbers**.
-- The input array is **not guaranteed to be sorted**.
-- The output must always be **sorted after squaring**.
-- If the input array is empty, return an empty array.
-##### **Examples**
-Input: nums = [1, 3, 5]
-Output: [1, 9, 25]
-Input: nums = [6, 0, 5]
-Output: [0, 25, 36]
-Input: nums = [-4, -2, 0, 1, 3]
-Output: [0, 1, 4, 9, 16]
-Input: nums = [3, 2, 3]
-Output: [4, 9, 9]
-Input: nums = []
-Output: []
-**Can you solve this problem in O(n) time instead of O(nlog⁡n)?**
-###### Method 1 Brute force
+Given an integer array `nums` sorted in **non-decreasing** order, return _an array of **the squares of each number** sorted in non-decreasing order_.
+**Example 1:**
+**Input:** `nums` = [-4,-1,0,3,10]
+**Output:** [0,1,9,16,100]
 ```python
-def sorted_square(array):
-	n = len(array)
-	res = []*n
-	for i in range(n):
-		res[i] = array[i]**2
-	res.sort()
-	return res
-```
-###### Method 2 Two-Pointer Approach
-- The input array is **sorted in non-decreasing order**.
-- When we take squares:
-    - Negative numbers become positive.
-    - The **largest square values come from elements with largest absolute values** (either leftmost negative or rightmost positive).
-- Therefore, the largest square will be at **either end of the array**.
-<-----------------------------------------------------0-----------------------------------------------------> 
-- value of square while we reach to left or right most end.
-- [-3,1,2,7] -> sorted array
-- [0,0,0,0] -> initialize an empty output array.
-- -3 = 9 , 7 = 49 compare both values put the largest value and decrement and continue.
-```python
-def sorted_square(array):
-	n = len(array)
-	i,j = 0, n-1
-	res = [0]*n
-	for k in reversed(range(n)):
-		if array[i]**2 > array[j]**2:
-			res[k] = array[i]**2
-			i += 1
-		else:
-			res[k] = array[j]**2
-			j -= 1
-	return res	
+class Solution:
+	def sortedSquares(self, nums: List[int]) -> List[int]:
+		first = 0
+		last = len(nums)-1
+		ans = [1]*len(nums)
+		i = len(nums)-1
+		while i >= 0:
+			if (nums[first]**2) > (nums[last]**2):
+				ans[i] = nums[first]**2
+				first = first+ 1
+			else:
+				ans[i] = nums[last]**2
+				last = last - 1
+			i = i - 1
+		return ans
 ```
 #### Problem 10
 ## **Check if an Array is Monotonic**
