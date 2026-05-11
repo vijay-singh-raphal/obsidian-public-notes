@@ -66,7 +66,7 @@ Can be sorted based on:
 - Roll Number
 - Name
 - Attendance
-# Bubble Sort – Complete Notes
+# Bubble Sort 
 Bubble Sort is one of the most basic and beginner-friendly sorting algorithms.
 It works by:
 ### Comparing adjacent (consecutive) elements
@@ -82,3 +82,9 @@ for i in range(n):
 			array[j],array[j+1] = array[j+1],array[j]
 print(array,"after bubble sort")
 ```
+# Selection Sort
+Selection Sort is one of the:
+- Simplest
+- Most beginner-friendly  sorting algorithms.
+It is even simpler than Bubble Sort in terms of understanding.
+![selectionSort|500](https://studyalgorithms.com/wp-content/uploads/2014/01/selection-sort.jpg)
