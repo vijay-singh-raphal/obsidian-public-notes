@@ -422,6 +422,102 @@ s = Solution()
 x = s.maxProduct([2,-5,-2,-4,3])
 print(x)
 ```
+#### Problem 8
+Determine if a `9 x 9` Sudoku board is valid. Only the filled cells need to be validated **according to the following rules**:
+1. Each row must contain the digits `1-9` without repetition.
+2. Each column must contain the digits `1-9` without repetition.
+3. Each of the nine `3 x 3` sub-boxes of the grid must contain the digits `1-9` without repetition.
+**Note:**
+- A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+- Only the filled cells need to be validated according to the mentioned rules.
+```python
+Input: 
+board = 
+[["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: true
+
+Input: 
+board = 
+[["8","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: false
+```
+
+```python
+class Solution:
+	def isValidSudoku(self, board: List[List[str]]) -> bool:
+		rowSet = [set() for _ in range(9)]
+		colSet = [set() for _ in range(9)]
+		gridSet = [set() for _ in range(9)]
+
+		for i in range(9):
+			for j in range(9):
+				if board[i][j] == '.':
+					continue
+				gridNo = (i//3)*3 + (j//3)
+
+				isPresentInRow = board[i][j] in rowSet[i]
+				isPresentInCol = board[i][j] in colSet[j]
+				isPresentInGrid = board[i][j] in gridSet[gridNo]
+  
+				if isPresentInRow or isPresentInCol or isPresentInGrid:
+					return False
+				rowSet[i].add(board[i][j])
+				colSet[j].add(board[i][j])
+				gridSet[gridNo].add(board[i][j])
+		return True
+```
+$gridNo = (i//3)*3 + (j//3)$
+Suppose board starts with:
+```python
+5 3 .
+6 . .
+. 9 8
+```
+Cell (0,0) = '5'
+Check:
+- `rowSet`[0] → empty
+- `colSet`[0] → empty
+- `gridSet`[0] → empty
+Add:
+```python
+rowSet[0] = {'5'}
+colSet[0] = {'5'}
+gridSet[0] = {'5'}
+```
+Cell (0,1) = '3'
+No duplicates.
+Add:
+```python
+rowSet[0] = {'5','3'}
+colSet[1] = {'3'}
+gridSet[0] = {'5','3'}
+```
+## Suppose Later We See Another '5' in Same Row
+Check:
+```python
+'5' in rowSet[0]
+```
+True.
+So:
+```python
+return False
+```
 #### Problem 1
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
