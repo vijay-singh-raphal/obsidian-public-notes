@@ -14,7 +14,7 @@ If:
 - `int = 4 bytes`
 - array size = `10`
 Then total memory required:
-$$10×4=40 bytes$$
+$$10×4=40bytes$$
 These 40 bytes are allocated **continuously in RAM**.
 # Arrays are Homogeneous
 All elements inside an array must be of the **same data type**.
@@ -27,7 +27,7 @@ int[] arr = new int[5];
 # Why Arrays are Fast?
 Arrays are fast because memory is continuous.
 This allows direct calculation of any element’s address.
-$$Address=Base Address+(Index×Size of Data Type)$$
+$$Address=BaseAddress+(Index×SizeofDataType)$$
 # Drawbacks of Arrays
 Arrays are very fast because they use **continuous memory allocation**.  
 But this same property also creates several limitations.
@@ -255,7 +255,7 @@ s = Solution()
 x = s.productExceptSelf([0,2,0,4])
 print(x)
 ```
-#### problem 4
+#### Problem 4
 Given an integer array `nums`, return _an array_ `answer` _such that_ `answer[i]` _is equal to the product of all the elements of_ `nums` _except_ `nums[i]`.
 The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
 You must write an algorithm that runs in `O(n)` time and without using the division operation.
@@ -518,7 +518,7 @@ So:
 ```python
 return False
 ```
-#### Problem 1
+#### Problem 9
 Given an integer array `nums` sorted in **non-decreasing order**, return a new array containing the **squares of each element**, also sorted in **non-decreasing (ascending) order**.
 ##### **Constraints**
 - $0≤len(nums)≤10^5$
@@ -575,7 +575,7 @@ def sorted_square(array):
 			j -= 1
 	return res	
 ```
-#### Problem 2
+#### Problem 10
 ## **Check if an Array is Monotonic**
 An array is said to be **monotonic** if it is either:
 - **Monotone Increasing**: All elements from left to right are **non-decreasing**  
