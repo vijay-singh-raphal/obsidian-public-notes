@@ -102,6 +102,17 @@ for i in range(n):
 print(array,"after selection sort")
 ```
 # Insertion sort
+Insertion Sort divides the array into two parts:
+- **Sorted Part**
+- **Unsorted Part**
+Initially:
+- The **first element** is always considered sorted.
+- Remaining elements are unsorted.
+### Working Principle
+Insertion Sort works by:
+1. Picking an element from the unsorted part.
+2. Placing it into its correct position in the sorted part.
+3. Shifting larger elements one position to the right.
 ![insertionSort|600](https://raw.githubusercontent.com/Codecademy/docs/main/media/insert-sort.png)
 ```python
 array = [30,20,60,40,10,50]
