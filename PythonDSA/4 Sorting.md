@@ -92,12 +92,13 @@ Repeatedly select the smallest element from the unsorted part and place it at th
 ```python
 array = [30,20,60,40,10,50]
 n = len(array)
-print(array,"before bubble sort")
-	for i in range(n):
-		smallestEle = i
+print(array,"before selection sort")
+for i in range(n):
+	smallestEle = i
 		for j in range(i+1,n):
 			if array[j] < array[smallestEle]:
 				smallestEle = j
 		array[i],array[smallestEle] = array[smallestEle],array[i]
-print(array,"after bubble sort")
+print(array,"after selection sort")
 ```
+
