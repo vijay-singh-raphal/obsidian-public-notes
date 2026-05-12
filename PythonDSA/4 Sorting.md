@@ -101,4 +101,18 @@ for i in range(n):
 		array[i],array[smallestEle] = array[smallestEle],array[i]
 print(array,"after selection sort")
 ```
-
+# Insertion sort
+![insertionSort|600](https://raw.githubusercontent.com/Codecademy/docs/main/media/insert-sort.png)
+```python
+array = [30,20,60,40,10,50]
+n = len(array)
+print(array,"before insertion sort")
+for i in range(1,n):
+	j = i-1
+	key = array[i]
+	while (j>=0 and array[j]> key):
+		array[j+1] = array[j]
+		j = j-1
+	array[j+1] = key
+print(array,"after insertion sort")
+```
