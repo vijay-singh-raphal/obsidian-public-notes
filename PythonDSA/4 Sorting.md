@@ -127,3 +127,43 @@ for i in range(1,n):
 	array[j+1] = key
 print(array,"after insertion sort")
 ```
+# What is Merge Operation?
+Merge operation is a technique used to combine **two sorted arrays** into **one sorted array**.
+It is the most important concept used in **Merge Sort**.
+### Input and Output
+We are given:
+- Array A → Sorted
+- Array B → Sorted
+We need to create:
+- Array C → Also Sorted
+```python
+a = [2,5,7,9,11]
+b = [3,4,8,10]
+c = [2, 3, 4, 5, 7, 8, 9, 10, 11]
+```
+
+```python
+a = [2,5,7,9,11]
+b = [3,4,8,10]
+n = len(a) + len(b)
+c = [0]*n
+i = 0
+j = 0
+k = 0
+while(i<len(a) or j<len(b)):
+	if i < len(a) and j < len(b):
+		if a[i] <= b[j]:
+			c[k] = a[i]
+			i = i+1
+		else:
+			c[k] = b[j]
+			j = j+1
+	elif i < len(a):
+		c[k] = a[i]
+		i = i+1
+	else:
+		c[k] = b[j]
+		j = j+1
+	k = k + 1
+print(c)
+```
