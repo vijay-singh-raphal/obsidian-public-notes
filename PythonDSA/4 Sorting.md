@@ -167,3 +167,51 @@ while(i<len(a) or j<len(b)):
 	k = k + 1
 print(c)
 ```
+# What is Merge Sort?
+Merge Sort is a:
+Divide and Conquer Sorting Algorithm
+It divides the array into smaller parts, sorts them, and merges them back.
+## Core Idea of Merge Sort
+Merge Sort works in 3 major steps:
+
+|Step|Work|
+|---|---|
+|Divide|Split array into smaller parts|
+|Conquer|Sort smaller parts recursively|
+|Merge|Combine sorted parts|
+![mergeSort|700](https://miro.medium.com/1*7Kox4Bll0Ddvb0td1tiXsg.png)
+```python
+a = [4,6,3,8,1,9,2,5,7]
+def merge(start,mid,end):
+	i = start
+	j = mid + 1
+	k = 0
+	c = [0]*(end-start+1)
+	while i<=mid or j<=end:
+		if i<=mid and j<=end:
+			if a[i] <= a[j]:
+				c[k] = a[i]
+				i = i+1
+			else:
+				c[k] = a[j]
+				j = j+1
+		elif (i<=mid):
+			c[k] = a[i]
+			i = i+1
+		else:
+			c[k] = a[j]
+			j = j+1
+		k = k+1
+for i in range(len(c)):
+	a[start + i] = c[i]
+
+def mergeSort(start,end):
+	if start < end:
+		mid = (start + end) // 2
+		mergeSort(start, mid)
+		mergeSort(mid+1,end)
+		merge(start,mid,end)
+
+mergeSort(0,len(a)-1)
+print(a)
+```
