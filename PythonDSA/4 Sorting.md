@@ -268,3 +268,12 @@ left = left + 1
 a[n-1],a[left] = a[left],a[n-1]
 print(a)
 ```
+# What is `Quicksort`?
+`Quicksort` is a **Divide and Conquer Sorting Algorithm** that uses the **Partition Function** to sort the array.
+## Main Idea Behind `Quicksort`
+The idea is very simple:
+1. Choose a Pivot
+2. Partition the array around the pivot
+3. Pivot reaches its correct position
+4. Recursively sort left part
+5. Recursively sort right part
