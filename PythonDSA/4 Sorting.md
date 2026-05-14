@@ -277,3 +277,25 @@ The idea is very simple:
 3. Pivot reaches its correct position
 4. Recursively sort left part
 5. Recursively sort right part
+```python
+a = [1,5,2,6,0,4,7,3]
+def partation(start,end):
+	left = start - 1
+	pivot = a[end]
+	for i in range(start,end):
+		if a[i] <= pivot:
+			left = left + 1
+			a[left],a[i] = a[i],a[left]
+	left = left + 1
+	a[end],a[left] = a[left],a[end]
+	return left
+
+def quickSort(left,right):
+	if left < right:
+		partationPoint = partation(left,right)
+		quickSort(left,partationPoint-1)
+		quickSort(partationPoint+1,right)
+
+quickSort(0,len(a)-1)
+print(a)
+```
