@@ -335,3 +335,23 @@ To achieve this we use:
 Also called:
 **Boyer–Moore Voting Algorithm**
 ![[moors.png|800]]
+```python
+from typing import List
+class Solution:
+	def majorityElement(self,nums:List[int])->int:
+		moc = nums[0]
+		co = 1
+		for i in range(1,len(nums)):
+			if nums[i] == moc:
+				co = co + 1
+			else:
+				co = co - 1
+				if co == 0:
+					moc = nums[i]
+					co = 1
+return moc
+s = Solution()
+a = [1,2,3,2,2,4,2]
+x = s.majorityElement(a)
+print(x)
+```
