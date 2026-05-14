@@ -215,3 +215,56 @@ def mergeSort(start,end):
 mergeSort(0,len(a)-1)
 print(a)
 ```
+# What is Partitioning?
+Partitioning means:
+Rearranging an array around a selected element called the **key** or **pivot**.
+After partitioning:
+- Elements **smaller than pivot** go to the left side
+- Elements **equal to pivot** stay in the middle
+- Elements **greater than pivot** go to the right side
+## Partitioning ≠ Sorting
+After partitioning:
+```python
+[2,1,0,3,5,4,6]
+```
+the array is still **unsorted**.
+Notice:
+- `2,1,0` are not sorted
+- `5,4,6` are not sorted
+Partitioning only guarantees:
+```python
+Left side  < Pivot < Right side
+```
+It does NOT guarantee full sorting.
+## Pivot / Key
+The selected element used for partitioning is called:
+- **Key**
+- **Pivot**
+Both mean the same thing.
+In this algorithm:
+Pivot is assumed to be the LAST element of the array.
+## Algorithm
+We maintain one variable:
+```python
+left = -1
+No elements smaller than pivot are found yet
+```
+The algorithm scans array from left → right.
+Whenever an element smaller than pivot is found:
+1. Increase `left`
+2. Swap current element with `arr[left]`
+This keeps all smaller elements grouped on the left side.
+![[partation.png]]
+```python
+a = [1,5,2,6,0,4,3]
+n = len(a)
+key = a[n-1]
+left = -1
+for i in range(n-1):
+	if(a[i] <= key):
+		left = left + 1
+		a[i],a[left] = a[left],a[i]
+left = left + 1
+a[n-1],a[left] = a[left],a[n-1]
+print(a)
+```
