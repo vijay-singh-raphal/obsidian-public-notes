@@ -299,8 +299,39 @@ def quickSort(left,right):
 quickSort(0,len(a)-1)
 print(a)
 ```
+#### Problem 1
 Given an integer array `nums`, move all `0`'s to the end of it while maintaining the relative order of the non-zero elements.
 **Note** that you must do this in-place without making a copy of the array.
 **Example 1:**
 **Input:** `nums` = [0,1,0,3,12]
 **Output:** [1,3,12,0,0]
+```python
+from typing import List
+class Solution:
+	def moveZeros(self,nums:List[int])->None:
+		left = 0
+		for i in range(len(nums)):
+			if nums[i] != 0:
+				nums[left],nums[i]=nums[i],nums[left]
+				left = left + 1
+s = Solution()
+a = [0,1,0,3,12]
+s.moveZeros(a)
+
+print(a)
+```
+#### Problem 2
+Given an array `nums` of size `n`, return _the majority element_.
+The majority element is the element that appears more than `⌊n / 2⌋` times. You may assume that the majority element always exists in the array.
+**Example 1:**
+**Input:** nums = [3,2,3]
+**Output:** 3
+
+**Example 2:**
+**Input:** `nums` = [2,2,1,1,1,2,2]
+**Output:** 2
+To achieve this we use:
+**Moore’s Voting Algorithm**
+Also called:
+**Boyer–Moore Voting Algorithm**
+![[moors.png|800]]
