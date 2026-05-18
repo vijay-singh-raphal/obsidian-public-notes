@@ -95,10 +95,34 @@ To solve these problems, we use:
 Instead of shifting:
 - We simply change links/pointers.
 
-|Feature|Array|Linked List|
-|---|---|---|
-|Memory|Contiguous|Non-contiguous|
-|Access|Fast O(1)|Slow O(n)|
-|Insert in middle|O(n)|O(1) after reaching node|
-|Delete in middle|O(n)|O(1) after reaching node|
-|Size|Fixed|Dynamic|
+| Feature          | Array      | Linked List              |
+| ---------------- | ---------- | ------------------------ |
+| Memory           | Contiguous | Non-contiguous           |
+| Access           | Fast O(1)  | Slow O(n)                |
+| Insert in middle | O(n)       | O(1) after reaching node |
+| Delete in middle | O(n)       | O(1) after reaching node |
+| Size             | Fixed      | Dynamic                  |
+# Basic implementation of LinkedList
+```python
+class Node:
+	def __init__(self,data):
+		self.data = data
+		self.next = None
+
+a = Node("AAA")
+b = Node("BBB")
+c = Node("CCC")
+d = Node("DDD")
+e = Node("EEE")
+
+head = a
+a.next = b
+b.next = c
+c.next = d
+d.next = e
+
+curr = head
+while(curr is not None):
+	print(curr.data)
+	curr = curr.next
+```
