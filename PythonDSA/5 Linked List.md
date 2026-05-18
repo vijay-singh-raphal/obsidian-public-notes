@@ -191,3 +191,59 @@ insertAtEnd("EEEE")
 
 traverse()
 ```
+# Insert Node at middle
+```python
+class Node:
+	def __init__(self,data):
+		self.data = data
+		self.next = None
+
+head = None
+tail = None
+length = 0
+
+def insertAtEnd(data):
+	global head
+	global tail
+	global length
+	newNode = Node(data)
+		if head is None:
+			head = newNode
+			tail = newNode
+			length += 1
+		else:
+			tail.next = newNode
+			tail = newNode
+			length +=1
+
+def insertAtMiddle(pos,data):
+	if pos < 1 or pos > length:
+		return
+	global lenght
+	newNode = Node(data)
+	i = 1
+	curr = head
+	while(i < pos-1):
+		curr = curr.next
+		i += 1
+		newNode.next = curr.next
+		curr.next = newNode
+		length += 1
+
+def traverse():
+	curr = head
+	while(curr is not None):
+		print(curr.data)
+		curr = curr.next
+
+insertAtEnd("AAAA")
+insertAtEnd("BBBB")
+insertAtEnd("CCCC")
+insertAtEnd("DDDD")
+insertAtEnd("EEEE")
+
+insertAtMiddle(2,200)
+insertAtMiddle(4,400)
+
+traverse()
+```
