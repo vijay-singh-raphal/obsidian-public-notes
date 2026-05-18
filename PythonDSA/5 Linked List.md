@@ -157,3 +157,37 @@ insertAtFirst("EEEE")
 
 traverse()
 ```
+# Insert Node at end
+```python
+class Node:
+	def __init__(self,data):
+		self.data = data
+		self.next = None
+
+head = None
+tail = None
+def insertAtEnd(data):
+	global head
+	global tail
+	newNode = Node(data)
+	if head is None:
+		head = newNode
+		tail = newNode
+	else:
+		tail.next = newNode
+		tail = newNode
+  
+def traverse():
+	curr = head
+	while(curr is not None):
+		print(curr.data)
+		curr = curr.next
+
+insertAtEnd("AAAA")
+insertAtEnd("BBBB")
+insertAtEnd("CCCC")
+insertAtEnd("DDDD")
+insertAtEnd("EEEE")
+
+traverse()
+```
