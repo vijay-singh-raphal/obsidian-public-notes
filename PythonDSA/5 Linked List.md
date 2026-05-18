@@ -126,3 +126,34 @@ while(curr is not None):
 	print(curr.data)
 	curr = curr.next
 ```
+# Insert Node at first
+```python
+class Node:
+	def __init__(self,data):
+		self.data = data
+		self.next = None
+
+head = None
+def insertAtFirst(data):
+	global head
+	newNode = Node(data)
+	if head is None:
+		head = newNode
+	else:
+		newNode.next = head
+		head = newNode
+
+def traverse():
+	curr = head
+	while(curr is not None):
+		print(curr.data)
+		curr = curr.next
+
+insertAtFirst("AAAA")
+insertAtFirst("BBBB")
+insertAtFirst("CCCC")
+insertAtFirst("DDDD")
+insertAtFirst("EEEE") 
+
+traverse()
+```
