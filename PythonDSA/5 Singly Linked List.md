@@ -378,3 +378,76 @@ deleteFromLast()
 
 traverse()
 ```
+# Delete from middle
+```python
+class Node:
+	def __init__(self,data):
+		self.data = data
+		self.next = None
+  
+head = None
+tail = None
+length = 0
+
+def insertAtEnd(data):
+	global head
+	global tail
+	global length
+
+	newNode = Node(data)
+
+	if head is None:
+		head = newNode
+		tail = newNode
+		length += 1
+	else:
+		tail.next = newNode
+		tail = newNode
+		length +=1
+
+def deleteFromMiddle(pos):
+	global head
+	global tail
+	global length
+  
+	if head is None:
+		print("No item available")
+		return
+	
+	if pos <= 1 or pos >= length:
+		print("invalid position")
+		return
+	
+	curr = head
+	temp = None
+	i = 1
+
+	while (i < pos):
+		temp = curr
+		curr = curr.next
+		i += 1
+	temp.next = curr.next
+	curr = None
+
+	length -= 1
+	print("middle element deleted successfully")
+
+def traverse():
+	curr = head
+	while(curr is not None):
+		print(curr.data)
+		curr = curr.next
+
+insertAtEnd("AAAA")
+insertAtEnd("BBBB")
+insertAtEnd("CCCC")
+insertAtEnd("DDDD")
+insertAtEnd("EEEE")
+  
+traverse() 
+
+deleteFromMiddle(2)
+deleteFromMiddle(3)
+
+traverse()
+```
