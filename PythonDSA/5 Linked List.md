@@ -219,7 +219,7 @@ def insertAtEnd(data):
 def insertAtMiddle(pos,data):
 	if pos < 1 or pos > length:
 		return
-	global lenght
+	global length
 	newNode = Node(data)
 	i = 1
 	curr = head
