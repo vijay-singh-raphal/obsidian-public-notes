@@ -247,3 +247,63 @@ insertAtMiddle(4,400)
 
 traverse()
 ```
+# Delete from first
+```python
+class Node:
+	def __init__(self,data):
+		self.data = data
+		self.next = None
+
+head = None
+tail = None
+length = 0
+
+def insertAtEnd(data):
+	global head
+	global tail
+	global length
+	newNode = Node(data)
+	if head is None:
+		head = newNode
+		tail = newNode
+		length += 1
+	else:
+		tail.next = newNode
+		tail = newNode
+		length +=1
+
+def deleteFromFirst():
+	global head
+	global tail
+	global length
+	if head is None:
+		print("No item found")
+		return
+
+	head = head.next
+	
+	if head is None:
+		tail = None
+	
+	length -= 1
+	print(f"first item is deleted successfully")
+
+def traverse():
+	curr = head
+	while(curr is not None):
+		print(curr.data)
+		curr = curr.next
+  
+insertAtEnd("AAAA")
+insertAtEnd("BBBB")
+insertAtEnd("CCCC")
+insertAtEnd("DDDD")
+insertAtEnd("EEEE")
+
+traverse()
+
+deleteFromFirst()
+deleteFromFirst()
+
+traverse()
+```
