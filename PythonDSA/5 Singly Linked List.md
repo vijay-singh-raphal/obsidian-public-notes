@@ -502,3 +502,45 @@ def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 		curr = nextNode
 	return pre
 ```
+#### Problem 3
+You are given the heads of two sorted linked lists `list1` and `list2`.
+Merge the two lists into one **sorted** list. The list should be made by splicing together the nodes of the first two lists.
+Return _the head of the merged linked list_.
+![merge](https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg)
+```python
+class Solution:
+	def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+		p1 = list1
+		p2 = list2
+		head = None
+		tail = None
+
+		while(p1 is not None or p2 is not None):
+			data = None
+			if (p1 is not None and p2 is not None):
+				if(p1.val <= p2.val):
+					data = p1.val
+					p1 = p1.next
+				else:
+					data = p2.val
+					p2 = p2.next
+			elif(p1 is not None):
+				data = p1.val
+				p1 = p1.next
+			else:
+				data = p2.val
+				p2 = p2.next
+
+			if tail is None:
+				head = self.insertAtLast(tail, data)
+				tail = head
+			else:
+				tail = self.insertAtLast(tail, data)
+		return head
+
+def insertAtLast(self,tail,data):
+newNode = ListNode(data)
+if tail is not None:
+tail.next = newNode
+return newNode
+```
