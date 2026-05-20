@@ -486,3 +486,19 @@ class Solution:
 				x += 1
 		return x
 ```
+#### Problem 2
+Given the `head` of a singly linked list, reverse the list, and return _the reversed list_.
+**Example 1:**
+![reverse](https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg)
+```python
+class Solution:
+def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+	pre = None
+	curr = head
+	while(curr is not None):
+		nextNode = curr.next
+		curr.next = pre
+		pre = curr
+		curr = nextNode
+	return pre
+```
